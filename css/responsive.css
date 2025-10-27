@@ -88,3 +88,30 @@
         font-size: 0.9rem;
     }
 }
+/* --- Add this to the end of responsive.css --- */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    header nav {
+        height: 4rem; /* Revert header height for mobile */
+    }
+    .nav-links {
+        top: 4rem; /* Match header height */
+    }
+
+    /* Stack Contact Page Grid */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column for projects */
+    }
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+}

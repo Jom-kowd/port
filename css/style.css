@@ -1,14 +1,20 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
 /* --- Global Styles & Variables --- */
 :root {
     --primary-color: #007BFF;
+    --primary-gradient: linear-gradient(90deg, #007BFF 0%, #0056b3 100%);
     --secondary-color: #6c757d;
-    --dark-bg: #1a1a1a;
+    --dark-bg: #121212; /* Darker background */
     --light-bg: #f8f9fa;
     --light-text: #f1f1f1;
     --dark-text: #212529;
     --card-bg: #ffffff;
     --border-color: #dee2e6;
-    --font-main: 'Arial', sans-serif;
+    --font-main: 'Poppins', sans-serif; /* New Font */
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    --radius: 12px; /* Rounded corners */
 }
 
 * {
@@ -35,12 +41,13 @@ body {
 }
 
 main {
-    padding-top: 4rem; /* Space for the fixed header */
+    padding-top: 5rem; /* More space for blurred header */
 }
 
 h1, h2, h3 {
     margin-bottom: 1rem;
     line-height: 1.2;
+    font-weight: 700;
 }
 
 h1 { font-size: 2.8rem; }
@@ -49,6 +56,7 @@ h3 { font-size: 1.5rem; }
 
 p {
     margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 a {
@@ -73,12 +81,17 @@ img {
     color: var(--secondary-color);
     text-align: center;
     margin-bottom: 2rem;
+    font-weight: 300;
 }
 
-/* --- Header & Navigation --- */
+/* --- Header & Navigation (Glassmorphism) --- */
 header {
-    background-color: var(--card-bg);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Glassmorphism Effect */
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    
     position: fixed;
     width: 100%;
     top: 0;
@@ -89,12 +102,12 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
+    height: 4.5rem; /* Slightly taller header */
 }
 
 .logo {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--dark-text);
 }
 
@@ -104,7 +117,7 @@ header nav {
 }
 
 .nav-links li {
-    margin-left: 1.5rem;
+    margin-left: 2rem; /* More spacing */
 }
 
 .nav-links a {
@@ -112,12 +125,28 @@ header nav {
     font-weight: 500;
     padding: 0.5rem;
     transition: color 0.3s ease;
+    position: relative;
 }
 
-.nav-links a:hover,
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
 .nav-links a.active {
     color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
 }
 
 .hamburger {
@@ -136,31 +165,33 @@ header nav {
 /* --- Utility Classes (Buttons) --- */
 .btn {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    font-weight: bold;
+    padding: 0.85rem 1.8rem;
+    border-radius: var(--radius);
+    font-weight: 500;
     text-align: center;
     transition: all 0.3s ease;
     margin: 0.25rem;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background: var(--primary-gradient);
     color: #fff;
-    border: 1px solid var(--primary-color);
 }
 .btn-primary:hover {
-    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
 }
 
 .btn-secondary {
-    background-color: transparent;
+    background-color: var(--card-bg);
     color: var(--dark-text);
     border: 1px solid var(--border-color);
 }
 .btn-secondary:hover {
     background-color: var(--light-bg);
-    border-color: var(--secondary-color);
+    transform: scale(1.05);
 }
 
 /* --- Hero Section --- */
@@ -175,6 +206,7 @@ header nav {
 }
 
 #hero h1 {
+    font-weight: 700;
     color: var(--dark-text);
 }
 
@@ -183,7 +215,7 @@ header nav {
     margin: 1rem auto 2rem;
 }
 
-/* --- Project Cards (Used on Home & Portfolio) --- */
+/* --- Project Cards (Modern Look) --- */
 #featured-projects, #portfolio {
     padding: 4rem 0;
     text-align: center;
@@ -191,7 +223,7 @@ header nav {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
     text-align: left;
@@ -199,32 +231,35 @@ header nav {
 
 .project-card {
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none; /* Remove old border */
+    display: flex;
+    flex-direction: column;
 }
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
 .project-card img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .project-card h3 {
-    padding: 1rem 1.5rem 0.5rem;
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-weight: 700;
 }
 
 .project-card p {
     padding: 0 1.5rem;
     font-size: 0.9rem;
-    flex-grow: 1; /* Makes description fill space */
+    flex-grow: 1;
+    font-weight: 300;
 }
 
 .project-tags {
@@ -238,30 +273,22 @@ header nav {
     background-color: #e9ecef;
     color: var(--secondary-color);
     font-size: 0.75rem;
-    font-weight: bold;
+    font-weight: 500;
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
 }
 
 .project-links {
-    padding: 1rem 1.5rem;
+    padding: 1.5rem;
     background-color: #fdfdfd;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid #f0f0f0;
 }
-/* On portfolio page, style links as buttons */
 .full-portfolio-grid .project-links {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
 }
 .full-portfolio-grid .project-links .btn {
     flex: 1;
-}
-
-/* --- Contact Section --- */
-#contact {
-    padding: 4rem 0;
-    text-align: center;
-    background-color: #fff;
 }
 
 /* --- About Page --- */
@@ -278,8 +305,8 @@ header nav {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 .about-text {
     flex: 1;
@@ -309,8 +336,8 @@ header nav {
     justify-content: center;
     background-color: var(--card-bg);
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
     transition: transform 0.3s ease;
 }
 .skill-item:hover {
@@ -325,14 +352,73 @@ header nav {
     font-weight: 500;
 }
 
+/* --- New Contact Page Styles --- */
+#contact-page {
+    padding: 4rem 0;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+.contact-form-container {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-info h3 {
+    margin-bottom: 1.5rem;
+}
+.contact-info ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+.contact-info li {
+    margin-bottom: 0.75rem;
+    font-weight: 300;
+}
+
 /* --- Footer --- */
 footer {
     background-color: var(--dark-bg);
     color: var(--light-text);
     text-align: center;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     margin-top: 4rem;
 }
 footer a {
     color: #fff;
+    opacity: 0.8;
+}
+footer a:hover {
+    opacity: 1;
 }

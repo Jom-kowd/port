@@ -6,6 +6,7 @@
     <title>My Skills - Your Name</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TLNBD30VM"></script>
@@ -24,13 +25,20 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="skills.html"class="active">Skills</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" >Contact</a></li>
             </ul>
             <div class="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
+            </div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" />
+                    <span class="slider round"></span>
+                </label>
             </div>
         </nav>
     </header>
@@ -91,6 +99,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/theme-toggle.js"></script>
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

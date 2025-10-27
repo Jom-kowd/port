@@ -1,0 +1,119 @@
+/* --- Dark Mode Variables (New "Tech Blue" Design) --- */
+
+body.dark-mode {
+    /* New Palette */
+    --light-bg: #0A192F; /* Very dark navy blue */
+    --card-bg: #112240; /* Lighter navy blue for cards */
+    --dark-text: #CCD6F6; /* Light slate blue for text */
+    --light-text: #CCD6F6;
+    --secondary-color: #8892B0; /* Greyish blue for sub-text */
+    --border-color: #233554; /* Subtle blue border */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    --primary-color: #64FFDA; /* A bright, tech-y mint/cyan */
+    --primary-gradient: linear-gradient(90deg, #64FFDA 0%, #00C6B6 100%);
+}
+
+/* --- Dark Mode Specific Fixes --- */
+
+/* Fix header glassmorphism */
+body.dark-mode header {
+    background-color: rgba(10, 25, 47, 0.85); /* Dark blue blur */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(204, 214, 246, 0.1);
+}
+
+/* Update nav link active/hover state to match new primary color */
+body.dark-mode .nav-links a::after {
+    background: var(--primary-color);
+}
+body.dark-mode .nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Fix project card box-shadow */
+body.dark-mode .project-card,
+body.dark-mode .skill-item,
+body.dark-mode .contact-form-container {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color); /* Add subtle border */
+}
+
+/* Fix form inputs */
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background-color: rgba(35, 53, 84, 0.5); /* Semi-transparent blue */
+    color: var(--light-text);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+}
+
+/* Make skill icons pop */
+body.dark-mode .skill-item i {
+    color: var(--primary-color);
+}
+body.dark-mode .skill-item span {
+    color: var(--light-text);
+}
+
+/* --- Theme Toggle Switch Styles --- */
+/* (This section is unchanged, but included for completeness) */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 44px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #4A5568; /* Darker grey for off state */
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
