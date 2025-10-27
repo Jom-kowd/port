@@ -1,0 +1,338 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6c757d;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f8f9fa;
+    --light-text: #f1f1f1;
+    --dark-text: #212529;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --font-main: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+main {
+    padding-top: 4rem; /* Space for the fixed header */
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.page-title {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.sub-headline {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--dark-text);
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-text);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* --- Utility Classes (Buttons) --- */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin: 0.25rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--dark-text);
+    border: 1px solid var(--border-color);
+}
+.btn-secondary:hover {
+    background-color: var(--light-bg);
+    border-color: var(--secondary-color);
+}
+
+/* --- Hero Section --- */
+#hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+#hero h1 {
+    color: var(--dark-text);
+}
+
+#hero .sub-headline {
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+}
+
+/* --- Project Cards (Used on Home & Portfolio) --- */
+#featured-projects, #portfolio {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-card h3 {
+    padding: 1rem 1.5rem 0.5rem;
+}
+
+.project-card p {
+    padding: 0 1.5rem;
+    font-size: 0.9rem;
+    flex-grow: 1; /* Makes description fill space */
+}
+
+.project-tags {
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tags span {
+    background-color: #e9ecef;
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+}
+
+.project-links {
+    padding: 1rem 1.5rem;
+    background-color: #fdfdfd;
+    border-top: 1px solid var(--border-color);
+}
+/* On portfolio page, style links as buttons */
+.full-portfolio-grid .project-links {
+    display: flex;
+    justify-content: space-between;
+}
+.full-portfolio-grid .project-links .btn {
+    flex: 1;
+}
+
+/* --- Contact Section --- */
+#contact {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* --- About Page --- */
+#about {
+    padding: 4rem 0;
+}
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.about-text {
+    flex: 1;
+}
+
+/* --- Skills Page --- */
+#skills {
+    padding: 4rem 0;
+}
+.skills-category {
+    margin-bottom: 3rem;
+}
+.skills-category h2 {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+}
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+.skill-item i {
+    font-size: 3rem;
+    color: var(--dark-text);
+}
+.skill-item span {
+    margin-top: 0.75rem;
+    font-weight: 500;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+footer a {
+    color: #fff;
+}
