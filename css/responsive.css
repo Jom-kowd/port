@@ -200,3 +200,29 @@
         margin-bottom: 1.25rem;
     }
 }
+/* --- Add this to the end of responsive.css --- */
+
+/* --- Modern Footer Responsive (3-Column) --- */
+@media (max-width: 768px) {
+    .footer-grid-minimal {
+        grid-template-columns: 1fr; /* Stack columns */
+        text-align: center;
+    }
+
+    .footer-col-left,
+    .footer-col-right,
+    .footer-col-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center all content */
+    }
+    
+    .footer-links {
+        margin-top: 1rem;
+    }
+    
+    .social-links {
+        justify-content: center; /* Center icons */
+        margin-top: 1rem;
+    }
+}

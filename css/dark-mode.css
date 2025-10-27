@@ -196,3 +196,36 @@ body.dark-mode .page-transition-overlay {
     /* This correctly uses your dark mode background variable */
     background: var(--light-bg); 
 }
+/* --- Add this to the end of dark-mode.css --- */
+
+/* --- Modern Footer Dark Mode (3-Column) --- */
+body.dark-mode footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+body.dark-mode .footer-col-left .logo,
+body.dark-mode .social-links a {
+    color: var(--light-text);
+}
+
+body.dark-mode .footer-col-left .logo:hover,
+body.dark-mode .social-links a:hover {
+    color: var(--primary-color);
+}
+
+body.dark-mode .footer-links a {
+    color: var(--secondary-color);
+}
+body.dark-mode .footer-links a:hover {
+    color: var(--primary-color);
+}
+
+body.dark-mode .footer-bottom {
+    background-color: var(--light-bg);
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-color);
+}
+body.dark-mode .dashboard-link {
+    color: var(--secondary-color);
+}

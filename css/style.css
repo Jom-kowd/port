@@ -639,3 +639,113 @@ footer a:hover {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
 }
+
+/* --- Add this to the end of style.css --- */
+/* --- Modern Footer (3-Column, Socials Center) --- */
+footer {
+    background-color: var(--card-bg);
+    color: var(--dark-text);
+    padding-top: 4rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-grid-minimal {
+    display: grid;
+    /* This creates 3 columns: Left (1.5fr), Center (1fr), Right (1fr) */
+    grid-template-columns: 1.5fr 1fr 1fr; 
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-col-left .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--secondary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Center-align the middle column's content */
+.footer-col-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center; /* Center links in their container */
+}
+
+.social-links a {
+    color: var(--dark-text);
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* --- Footer Bottom Bar (Centered) --- */
+.footer-bottom {
+    background-color: var(--light-bg);
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    
+    /* This centers the content as you requested */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    padding-left: 0; /* Clear previous padding */
+}
+
+.dashboard-link {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    padding-right: 0; /* Clear previous padding */
+}
+.dashboard-link:hover {
+    opacity: 1;
+}
