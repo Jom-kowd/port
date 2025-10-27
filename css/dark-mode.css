@@ -117,3 +117,25 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+/* --- Add this to the end of dark-mode.css --- */
+
+/* --- Project Filter (Dark Mode) --- */
+body.dark-mode .filter-btn {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--secondary-color);
+}
+
+body.dark-mode .filter-btn:hover {
+    background-color: rgba(100, 255, 218, 0.1); /* Light mint glow */
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+body.dark-mode .filter-btn.active {
+    background: var(--primary-gradient);
+    color: #0A192F; /* Dark background color for high contrast */
+    border-color: var(--primary-color);
+    font-weight: 700;
+}

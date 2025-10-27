@@ -111,6 +111,10 @@
     .project-grid {
         grid-template-columns: 1fr; /* Single column for projects */
     }
+    /* This ensures hidden cards are truly hidden */
+    .project-card.hide {
+        display: none !important;
+    }
     .contact-form-container {
         padding: 1.5rem;
     }

@@ -47,11 +47,20 @@
             <h1 class="page-title">My Projects</h1>
             <p class="sub-headline">Here is a collection of my work. Click on any project to see the code or a live demo.</p>
 
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="react">React</button>
+                <button class="filter-btn" data-filter="vue">Vue</button>
+                <button class="filter-btn" data-filter="node">Node.js</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="html">HTML/CSS</button>
+            </div>
+
             <div class="project-grid full-portfolio-grid">
-                <div class="project-card">
+                <div class="project-card" data-tags="react node mongodb">
                     <img src="images/project-1.png" alt="Project 1 Screenshot">
                     <h3>Project Title 1</h3>
-                    <p>A short description of your project, its purpose, and the technologies used.</p>
+                    <p>A short description...</p>
                     <div class="project-tags">
                         <span>React</span>
                         <span>Node.js</span>
@@ -63,13 +72,13 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/project-2.png" alt="Project 2 Screenshot">
-                    <h3>Project Title 2</h3>
-                    <p>A short description of your project, its purpose, and the technologies used.</p>
+                    <img src="images/project-1.png" alt="Project 1 Screenshot">
+                    <h3>Project Title 1</h3>
+                    <p>A short description...</p>
                     <div class="project-tags">
-                        <span>Vue</span>
-                        <span>Express</span>
-                        <span>PostgreSQL</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
                     </div>
                     <div class="project-links">
                         <a href="#" target="_blank" class="btn btn-primary">Live Demo</a>
@@ -77,13 +86,13 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/project-3.png" alt="Project 3 Screenshot">
-                    <h3>Project Title 3</h3>
-                    <p>A short description of your project, its purpose, and the technologies used.</p>
+                    <img src="images/project-1.png" alt="Project 1 Screenshot">
+                    <h3>Project Title 1</h3>
+                    <p>A short description...</p>
                     <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Python (Flask)</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
                     </div>
                     <div class="project-links">
                         <a href="#" target="_blank" class="btn btn-primary">Live Demo</a>
@@ -103,6 +112,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/theme-toggle.js"></script>
+    <script src="js/project-filter.js"></script>
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
