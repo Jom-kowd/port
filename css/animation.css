@@ -1,5 +1,25 @@
 /* --- Scroll Reveal Animations --- */
+/* --- Add this to the TOP of animations.css --- */
 
+/* --- Page Transition Overlay --- */
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Uses the light mode background by default */
+    background: var(--light-bg); 
+    z-index: 9999;
+    /* Start fully visible (will be faded out by JS) */
+    opacity: 1; 
+    pointer-events: none;
+    /* This duration MUST match the setTimeout in the JS */
+    transition: opacity 0.4s ease-in-out; 
+}
+
+/* --- (Rest of your scroll-reveal styles) --- */
+/* ... */
 /* This is the "before" state.
   Elements start invisible and slightly moved down.
 */

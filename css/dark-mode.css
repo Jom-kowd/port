@@ -139,3 +139,60 @@ body.dark-mode .filter-btn.active {
     border-color: var(--primary-color);
     font-weight: 700;
 }
+
+/* --- Add this to the end of dark-mode.css --- */
+
+/* --- Home Page Dark Mode --- */
+body.dark-mode #home-about {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode #home-cta {
+    background: var(--primary-gradient);
+}
+body.dark-mode #home-cta h2 {
+    color: #fff;
+}
+body.dark-mode #home-cta .btn-primary {
+    background: #fff;
+    color: #0A192F; /* Dark bg color for high contrast */
+}
+body.dark-mode #home-cta .btn-primary:hover {
+    background: var(--light-text);
+}
+
+/* --- Add this to the end of dark-mode.css --- */
+
+/* --- Hero Section Dark Mode --- */
+body.dark-mode #hero {
+    background-color: var(--light-bg); /* This applies your dark navy background */
+}
+
+body.dark-mode #hero .hero-image img {
+    border: 3px solid var(--border-color); /* Adds a subtle border */
+    box-shadow: none; /* Removes the light-mode shadow */
+}
+/* --- Add this to the end of dark-mode.css --- */
+
+/* --- Certificate Page Dark Mode --- */
+body.dark-mode .certificate-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .cert-icon svg {
+    color: var(--primary-color);
+}
+
+body.dark-mode .cert-info p {
+    color: var(--secondary-color);
+}
+
+/* --- Add this to the end of dark-mode.css --- */
+
+/* --- Page Transition Dark Mode --- */
+body.dark-mode .page-transition-overlay {
+    /* This correctly uses your dark mode background variable */
+    background: var(--light-bg); 
+}

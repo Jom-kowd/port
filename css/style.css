@@ -476,3 +476,166 @@ footer a:hover {
     /* This helps the grid reflow smoothly */
     transition: all 0.4s ease;
 }
+
+/* --- Add this to the end of style.css --- */
+
+/* --- New Hero Layout --- */
+#hero .hero-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+}
+#hero .hero-text {
+    flex: 1;
+}
+#hero .hero-text .sub-headline {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 500px;
+}
+#hero .hero-image {
+    flex-basis: 40%;
+    display: none; /* Hide image by default, show on desktop */
+}
+
+/* Show hero image on desktop */
+@media (min-width: 769px) { 
+    #hero .hero-image {
+        display: block;
+    }
+    #hero .hero-image img {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+        border-radius: 50%; /* Modern circle look */
+        object-fit: cover;
+        aspect-ratio: 1/1;
+        box-shadow: var(--shadow);
+    }
+}
+
+/* --- Home About Section --- */
+#home-about {
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 4rem auto;
+}
+#home-about-image {
+    flex-basis: 300px;
+}
+#home-about-image img {
+    border-radius: var(--radius);
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+#home-about-text {
+    flex: 1;
+}
+
+/* --- Home Skills Section --- */
+#home-skills {
+    padding: 4rem 0;
+    text-align: center;
+}
+.home-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+/* This section re-uses the .skill-item styles automatically */
+
+/* --- Home CTA Section --- */
+#home-cta {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--primary-gradient);
+    color: #fff;
+    border-radius: var(--radius);
+    margin: 4rem auto;
+}
+#home-cta h2 {
+    color: #fff;
+}
+#home-cta p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+#home-cta .btn-primary {
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+#home-cta .btn-primary:hover {
+    background: var(--light-bg);
+    transform: scale(1.05);
+}
+
+/* --- Add this to the end of style.css --- */
+
+/* --- Certificate Page --- */
+#certificates {
+    padding: 4rem 0;
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.certificate-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.cert-icon {
+    flex-shrink: 0;
+}
+
+.cert-icon svg {
+    width: 50px;
+    height: 50px;
+    color: var(--primary-color);
+}
+
+.cert-info h3 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.cert-info p {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.cert-info .btn-secondary {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
