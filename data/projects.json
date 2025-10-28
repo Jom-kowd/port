@@ -1,0 +1,28 @@
+[
+  {
+    "id": "project-1",
+    "title": "Project Title 1",
+    "image": "images/project-1.png",
+    "short_desc": "A short description...",
+    "long_desc": "This project was built to solve a key problem in X. I focused on creating a fast, responsive user interface using React and a secure backend with Node.js and Express. A key challenge was implementing the MongoDB aggregation pipeline for the user dashboard.",
+    "tags": ["React", "Node.js", "MongoDB"],
+    "live_url": "#",
+    "code_url": "#",
+    "gallery": [
+      "images/project-1.png",
+      "images/project-1-gallery-a.png",
+      "images/project-1-gallery-b.png"
+    ]
+  },
+  {
+    "id": "project-2",
+    "title": "Project Title 2",
+    "image": "images/project-2.png",
+    "short_desc": "A short description of your second project...",
+    "long_desc": "For this project, I explored the Vue.js framework. The main goal was to build a lightweight and fast single-page application. I learned a lot about Vue's component system and state management.",
+    "tags": ["Vue", "Express", "HTML/CSS"],
+    "live_url": "#",
+    "code_url": "#",
+    "gallery": []
+  }
+]

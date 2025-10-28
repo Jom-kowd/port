@@ -749,3 +749,56 @@ footer {
 .dashboard-link:hover {
     opacity: 1;
 }
+
+/* --- Add this to the end of style.css --- */
+
+/* --- Project Detail Page --- */
+#project-detail-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.project-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.project-detail-media img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.project-detail-info h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-detail-info .project-tags {
+    /* Re-use existing project-tags styles */
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.project-detail-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* --- Responsive for Project Detail Page --- */
+@media (max-width: 768px) {
+    .project-detail-grid {
+        grid-template-columns: 1fr; /* Stack columns on tablet/mobile */
+        gap: 2rem;
+    }
+    
+    .project-detail-info h2 {
+        margin-top: 2.5rem;
+    }
+}
