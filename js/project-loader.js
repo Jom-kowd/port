@@ -72,6 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
             dataEl.style.display = 'block';
             loadingEl.style.display = 'none';
 
+            // 6. Load the comments for this specific project
+            loadDisqusComments(project.id, project.title);
+
         } catch (error) {
             // If anything went wrong, show the error message
             console.error('Error loading project:', error.message);
@@ -80,6 +83,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Run the function
+    /**
+     * Loads the Disqus comment thread for a specific page.
+     * @param {string} projectId - The unique ID of the project (e.g., "project-1")
+     * @param {string} projectTitle - The title of the project
+     */
+    function loadDisqusComments(projectId, projectTitle) {
+        // ### PUT YOUR DISQUS SHORTNAME HERE ###
+        // Remember to replace 'YOUR_SHORTNAME_HERE' with your actual Disqus shortname
+        const DISQUS_SHORTNAME = 'my-portfolio-tphd8res2o'; 
+
+        // This configuration tells Disqus what page it's on.
+        var disqus_config = function () {
+            this.page.url = window.location.href;  
+            this.page.identifier = projectId; 
+            this.page.title = projectTitle;
+        };
+        
+        (function() { 
+            if (!document.getElementById('disqus_thread')) return;
+            var d = document, s = d.createElement('script');
+            s.src = `https://${DISQUS_SHORTNAME}.disqus.com/embed.js`;
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    }
+
+    // Run the main function
     loadProjectDetails();
 });
