@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='7 8 3 12 7 16'%3E%3C/polyline%3E%3Cpolyline points='17 8 21 12 17 16'%3E%3C/polyline%3E%3Cline x1='13' y1='5' x2='11' y2='19'%3E%3C/line%3E%3C/svg%3E">
-    <link rel="stylesheet" href="css/animations.css"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TLNBD30VM"></script>
+    <link rel="stylesheet" href="css/animations.css"> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TLNBD30VM"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -49,41 +50,8 @@
             <p class="sub-headline fade-in-element">A collection of my certifications and completed courses.</p>
 
             <div class="certificate-grid fade-in-element">
-                
-                <div class="certificate-card">
-                    <div class="cert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.9l4.3 1.9v3.7c0 3.2-1.8 6.2-4.3 7.9-2.5-1.7-4.3-4.7-4.3-7.9V3.8L12 1.9zM11 16c-3.3 0-6-1.2-6 2.8v1.5C5 21.2 8.1 22 12 22s7-.8 7-1.8v-1.5c0-1.5-2.7-2.8-6-2.8h-2z"></path></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h3>CSS Essentials</h3>
-                        <p>Issued by: Cisco Networking Academy</p>
-                        <a href="certificates/CSSEssentialsv120250407-27-6gdqmg.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="certificate-card">
-                    <div class="cert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.9l4.3 1.9v3.7c0 3.2-1.8 6.2-4.3 7.9-2.5-1.7-4.3-4.7-4.3-7.9V3.8L12 1.9zM11 16c-3.3 0-6-1.2-6 2.8v1.5C5 21.2 8.1 22 12 22s7-.8 7-1.8v-1.5c0-1.5-2.7-2.8-6-2.8h-2z"></path></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h3>JavaScript Essentials 2</h3>
-                        <p>Issued by: [Issuer Name]</p>
-                        <a href="certificates/JavaScriptEssentials2Update20250407-28-mx6xhk badge.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="certificate-card">
-                    <div class="cert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.9l4.3 1.9v3.7c0 3.2-1.8 6.2-4.3 7.9-2.5-1.7-4.3-4.7-4.3-7.9V3.8L12 1.9zM11 16c-3.3 0-6-1.2-6 2.8v1.5C5 21.2 8.1 22 12 22s7-.8 7-1.8v-1.5c0-1.5-2.7-2.8-6-2.8h-2z"></path></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h3>Maintaining Computer Systems</h3>
-                        <p>Issued by: [Issuer Name]</p>
-                        <a href="certificates/Maintaining Computer Systems and Networks - Copy.pdf" target="_blank" class="btn btn-secondary">View Certificate</a>
-                    </div>
-                </div>
-
-                </div>
+                <h3 class="page-title" style="font-size: 1.5rem; text-align: center; grid-column: 1 / -1;">Loading Certificates...</h3>
+            </div>
         </section>
     </main>
 
@@ -113,7 +81,6 @@
                 </div>
             </div>
         </div>
-        <!-- please center this footer content -->
         <div class="footer-bottom">
             <p>&copy; 2025 Mark Jomar Calmateo. All rights reserved.</p>
             <a href="https://analytics.google.com/" target="_blank" class="dashboard-link">Dashboard</a>
@@ -122,10 +89,12 @@
 
     <script src="js/main.js"></script>
     <script src="js/theme-toggle.js"></script>
+    
+    <script src="js/certificate-loader.js" defer></script>
     <script src="js/scroll-reveal.js" defer></script>
     <script src="js/page-transitions.js" defer></script>
     
-    <script type(text/javascript">
+    <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
