@@ -1,6 +1,7 @@
 // Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Mobile Nav Hamburger ---
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -14,6 +15,32 @@ document.addEventListener('DOMContentLoaded', () => {
             // Toggle the 'toggle' class for the hamburger animation
             hamburger.classList.toggle('toggle');
         });
+    }
+
+    // --- Hero Section Typing Animation ---
+    // Check if the element with id 'hero-headline' exists
+    if (document.getElementById('hero-headline')) {
+        
+        // Make sure the TypeIt library is loaded
+        if (typeof TypeIt !== 'undefined') {
+            
+            new TypeIt("#hero-headline", {
+                strings: [
+                    "Hi, I'm Mark Jomar S. Calmateo.",
+                    "I'm an Aspiring Full Stack Developer.",
+                    "I build digital solutions from the Philippines 🇵🇭."
+                ],
+                speed: 60,         // How fast it types
+                breakLines: false, // Don't add <br> tags
+                waitUntilVisible: true, // Wait until the element is on screen
+                loop: true,        // Loop forever
+                deleteSpeed: 40,   // How fast it deletes
+                lifeLike: true     // More "human" typing
+            }).go(); // Start the animation
+
+        } else {
+            console.error("TypeIt.js library is not loaded.");
+        }
     }
 
 });
