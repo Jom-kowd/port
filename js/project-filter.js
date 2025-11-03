@@ -1,10 +1,22 @@
+// We run this once on load for other pages, and it's called
+// again by portfolio-loader.js after projects are fetched.
 document.addEventListener('DOMContentLoaded', () => {
-    // Find the filter bar and project grid
+    initializeProjectFilter();
+});
+
+/**
+ * Finds all project filter buttons and adds click listeners
+ * to show/hide project cards based on their data-tags.
+ */
+function initializeProjectFilter() {
     const filterContainer = document.querySelector('.filter-bar');
     const projectGrid = document.querySelector('.project-grid');
 
     // Make sure both exist before running
     if (filterContainer && projectGrid) {
+        
+        // We must query for the cards *inside* this function
+        // so we get the newly loaded ones.
         const projectCards = projectGrid.querySelectorAll('.project-card');
 
         filterContainer.addEventListener('click', (e) => {
@@ -30,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const cardTags = card.dataset.tags;
 
                 // Check if the card has the tag or if 'all' was clicked
-                if (filterValue === 'all' || cardTags.includes(filterValue)) {
+                if (filterValue === 'all' || (cardTags && cardTags.includes(filterValue))) {
                     card.classList.remove('hide'); // Show the card
                 } else {
                     card.classList.add('hide'); // Hide the card
@@ -38,4 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-});
+}
