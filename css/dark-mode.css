@@ -375,3 +375,28 @@ body.dark-mode .timeline-content {
 body.dark-mode .content-block h2 {
     border-bottom-color: var(--border-color);
 }
+
+/* --- css/dark-mode.css (Add to bottom) --- */
+
+/* Mobile Menu Dark Mode Specifics */
+@media (max-width: 768px) {
+    body.dark-mode .nav-links {
+        background-color: var(--card-bg); /* Ensures dark navy background */
+        border-top: 1px solid var(--border-color);
+    }
+
+    /* Force link colors in mobile menu to be light */
+    body.dark-mode .nav-links a {
+        color: var(--light-text);
+        font-size: 1.2rem; /* Make them slightly bigger on mobile */
+    }
+
+    body.dark-mode .nav-links a.active {
+        color: var(--primary-color);
+    }
+    
+    /* Ensure Hamburger lines turn white */
+    body.dark-mode .hamburger .line {
+        background-color: var(--light-text);
+    }
+}
