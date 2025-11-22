@@ -1,28 +1,242 @@
 [
   {
-    "id": "project-1",
-    "title": "Project Title 1",
-    "image": "images/project-1.png",
-    "short_desc": "A short description...",
-    "long_desc": "This project was built to solve a key problem in X. I focused on creating a fast, responsive user interface using React and a secure backend with Node.js and Express. A key challenge was implementing the MongoDB aggregation pipeline for the user dashboard.",
-    "tags": ["React", "Node.js", "MongoDB"],
+    "id": "dev-bims",
+    "title": "BIMS Web System",
+    "image": "projects/DEVELOPMENT/BIMSwebsystem.png",
+    "short_desc": "Barangay Information Management System.",
+    "long_desc": "A comprehensive web-based system designed to manage barangay records, including population, voters, blotter records, and certificate issuance.",
+    "tags": ["Development", "Web System", "Dashboard"],
     "live_url": "#",
-    "code_url": "#",
-    "gallery": [
-      "images/project-1.png",
-      "images/project-1-gallery-a.png",
-      "images/project-1-gallery-b.png"
-    ]
+    "code_url": "#"
   },
   {
-    "id": "project-2",
-    "title": "Project Title 2",
-    "image": "images/project-2.png",
-    "short_desc": "A short description of your second project...",
-    "long_desc": "For this project, I explored the Vue.js framework. The main goal was to build a lightweight and fast single-page application. I learned a lot about Vue's component system and state management.",
-    "tags": ["Vue", "Express", "HTML/CSS"],
+    "id": "dev-pasalubong",
+    "title": "Nicole's Pasalubong Shop",
+    "image": "projects/DEVELOPMENT/pasalubongshop.png",
+    "short_desc": "E-commerce landing page for local delicacies.",
+    "long_desc": "A vibrant e-commerce interface designed for a local pasalubong shop, featuring a clean layout for showcasing products.",
+    "tags": ["Development", "E-Commerce", "UI/UX"],
     "live_url": "#",
-    "code_url": "#",
-    "gallery": []
+    "code_url": "#"
+  },
+  {
+    "id": "dev-mj-moto",
+    "title": "MJ's Moto Shop",
+    "image": "projects/DEVELOPMENT/mjmotoshop.png",
+    "short_desc": "Automotive parts and accessories shop interface.",
+    "long_desc": "A sleek, dark-themed website design for a motorcycle parts and accessories shop, emphasizing high-quality visuals.",
+    "tags": ["Development", "Web Design", "Dark Mode"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "dev-tech-find",
+    "title": "Tech Find",
+    "image": "projects/DEVELOPMENT/TechFindVBNET.png",
+    "short_desc": "Interactive word search game built in VB.NET.",
+    "long_desc": "A desktop application game developed using VB.NET where players find technology-related words within a grid.",
+    "tags": ["Development", "VB.NET", "Game Dev"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "dev-memory-savior",
+    "title": "Memory Savior",
+    "image": "projects/DEVELOPMENT/MemorySaviorVBNET.png",
+    "short_desc": "Desktop memory puzzle game.",
+    "long_desc": "A game application built with VB.NET featuring user profiles, leaderboards, and varying difficulty levels.",
+    "tags": ["Development", "VB.NET", "Game Dev"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "dev-find-collect",
+    "title": "Find and Collect",
+    "image": "projects/DEVELOPMENT/FindAndCollectVBNET.png",
+    "short_desc": "Hidden object style game.",
+    "long_desc": "An interactive desktop game where players must locate specific items within various scenes. Built using VB.NET.",
+    "tags": ["Development", "VB.NET", "Game Dev"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "dev-memory-match",
+    "title": "Memory Match",
+    "image": "projects/DEVELOPMENT/MemoryMatchGame.png",
+    "short_desc": "Classic card matching browser game.",
+    "long_desc": "A web-based implementation of the classic memory matching game, testing user recall and concentration.",
+    "tags": ["Development", "JavaScript", "Game"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "dev-shuffle-text",
+    "title": "Shuffle Text Game",
+    "image": "projects/DEVELOPMENT/ShuffleTextGame.png",
+    "short_desc": "Word scramble puzzle application.",
+    "long_desc": "A simple yet addictive word game where users must unscramble jumbled letters to form the correct word.",
+    "tags": ["Development", "JavaScript", "Game"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "dev-tiktaktoe",
+    "title": "Tic Tac Toe",
+    "image": "projects/DEVELOPMENT/tiktaktoe.png",
+    "short_desc": "Modern UI version of the classic game.",
+    "long_desc": "A clean, dark-themed web version of Tic Tac Toe with restart functionality and game state management.",
+    "tags": ["Development", "JavaScript", "Game"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "dev-calculator",
+    "title": "Simple Calculator",
+    "image": "projects/DEVELOPMENT/simplecalculator.png",
+    "short_desc": "Functional web-based calculator.",
+    "long_desc": "A fully functional calculator with a modern dark UI, capable of handling basic arithmetic operations.",
+    "tags": ["Development", "JavaScript", "Tool"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "dev-portfolio-v2",
+    "title": "Portfolio V2",
+    "image": "projects/DEVELOPMENT/myportfoliov2.png",
+    "short_desc": "Previous iteration of personal portfolio.",
+    "long_desc": "A minimalist, dark-themed personal website design focused on typography and essential information.",
+    "tags": ["Development", "Portfolio", "Web Design"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "dev-asus-concept",
+    "title": "ASUS Landing Page Concept",
+    "image": "projects/DEVELOPMENT/asus.png",
+    "short_desc": "Frontend clone/concept for ASUS.",
+    "long_desc": "A responsive landing page design concept inspired by ASUS, focusing on clean product presentation.",
+    "tags": ["Development", "Frontend", "Concept"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-aclc-jersey",
+    "title": "ACLC Hawks Jersey",
+    "image": "projects/GRAPHIC DESIGN/ACLC-Naga.jpg",
+    "short_desc": "Sports jersey design for ACLC Naga.",
+    "long_desc": "Full sublimation basketball jersey design featuring the ACLC Hawks branding with a modern geometric pattern.",
+    "tags": ["Graphic Design", "Jersey", "Apparel"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-jaguar-riders",
+    "title": "Jaguar Riders Club",
+    "image": "projects/GRAPHIC DESIGN/jaguarriderclub.jpg",
+    "short_desc": "Motorcycle club long sleeve design.",
+    "long_desc": "Aggressive and detailed layout design for Jaguar Motorcycle Riders Club featuring custom illustration.",
+    "tags": ["Graphic Design", "Jersey", "Apparel"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-skr-riders",
+    "title": "SKR Riders",
+    "image": "projects/GRAPHIC DESIGN/SKR-RIDERS.jpg",
+    "short_desc": "Racing style long sleeve jersey.",
+    "long_desc": "Dynamic jersey design for SKR Riders incorporating racing elements and bold typography.",
+    "tags": ["Graphic Design", "Jersey", "Apparel"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-genggeng",
+    "title": "Geng Geng Moto Club",
+    "image": "projects/GRAPHIC DESIGN/genggengmotoclub.jpg",
+    "short_desc": "Camouflage themed rider jersey.",
+    "long_desc": "Rider jersey design mixing camouflage patterns with clean vector badges for Geng Geng Moto Club.",
+    "tags": ["Graphic Design", "Jersey", "Apparel"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-sepak-takraw",
+    "title": "Sepak Takraw League",
+    "image": "projects/GRAPHIC DESIGN/SepakTakrawLeagueShirt.jpg",
+    "short_desc": "Fluid wave design for sports league.",
+    "long_desc": "Jersey design for the Sepak Takraw League utilizing abstract fluid wave patterns in blue and white.",
+    "tags": ["Graphic Design", "Jersey", "Sports"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-cabusay-sk",
+    "title": "Brgy. Cabusay SK",
+    "image": "projects/GRAPHIC DESIGN/BrgyCabusay.jpg",
+    "short_desc": "Official polo shirt design.",
+    "long_desc": "Formal yet modern polo shirt layout for the Sangguniang Kabataan of Brgy. Cabusay.",
+    "tags": ["Graphic Design", "Apparel", "Uniform"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-tabagwang-shirt",
+    "title": "Tabagwang Festival Shirt",
+    "image": "projects/GRAPHIC DESIGN/TabagwangShirt.jpg",
+    "short_desc": "Official festival merchandise.",
+    "long_desc": "Colorful and artistic t-shirt design for the Tabagwang Festival featuring local landmarks and cultural symbols.",
+    "tags": ["Graphic Design", "T-Shirt", "Festival"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-reunion-tree",
+    "title": "Calmateo Reunion",
+    "image": "projects/GRAPHIC DESIGN/ReunionTarpulin.jpg",
+    "short_desc": "Family reunion event backdrop.",
+    "long_desc": "Large scale tarpaulin design for the 10th Calmateo Family Reunion featuring a symbolic family tree.",
+    "tags": ["Graphic Design", "Tarpaulin", "Events"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-tbrc-logo",
+    "title": "TBRC Logo",
+    "image": "projects/GRAPHIC DESIGN/TBRClogo.jpg",
+    "short_desc": "True Buddies Riders Club Logo.",
+    "long_desc": "Official logo design for TBRC symbolizing unity and brotherhood among riders.",
+    "tags": ["Graphic Design", "Logo", "Branding"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-poster-infidelity",
+    "title": "Film Poster: Infidelity",
+    "image": "projects/GRAPHIC DESIGN/Poster.jpg",
+    "short_desc": "Short film promotional poster.",
+    "long_desc": "Mood-setting movie poster design for the short film 'Infidelity', highlighting the lead cast.",
+    "tags": ["Graphic Design", "Poster", "Print"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-menu-tarp",
+    "title": "Frozen Foods Menu",
+    "image": "projects/GRAPHIC DESIGN/TarpulinMenu.jpg",
+    "short_desc": "Advertising tarpaulin for food business.",
+    "long_desc": "High-visibility menu design for a frozen foods business, designed to catch attention.",
+    "tags": ["Graphic Design", "Tarpaulin", "Advertising"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "des-election-poster",
+    "title": "Election Campaign Poster",
+    "image": "projects/GRAPHIC DESIGN/electionPoster.jpg",
+    "short_desc": "Campaign material layout.",
+    "long_desc": "Template design for election campaign posters featuring bold typography and patriotic colors.",
+    "tags": ["Graphic Design", "Poster", "Campaign"],
+    "live_url": "#",
+    "code_url": "#"
   }
 ]

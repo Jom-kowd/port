@@ -16,7 +16,7 @@ function initializeProjectFilter() {
     if (filterContainer && projectGrid) {
         
         // We must query for the cards *inside* this function
-        // so we get the newly loaded ones.
+        // so we get the newly loaded ones from the JSON fetch.
         const projectCards = projectGrid.querySelectorAll('.project-card');
 
         filterContainer.addEventListener('click', (e) => {
@@ -25,24 +25,26 @@ function initializeProjectFilter() {
                 return;
             }
 
-            // Remove 'active' class from all buttons
+            // 1. Remove 'active' class from all buttons
             filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
 
-            // Add 'active' class to the clicked button
+            // 2. Add 'active' class to the clicked button
             const filterButton = e.target;
             filterButton.classList.add('active');
 
-            // Get the filter value from the 'data-filter' attribute
+            // 3. Get the filter value from the button's data attribute
             const filterValue = filterButton.dataset.filter;
 
-            // Loop through all project cards
+            // 4. Loop through all project cards and toggle visibility
             projectCards.forEach(card => {
+                // Get the tags string from the HTML attribute (e.g., "react node.js")
                 const cardTags = card.dataset.tags;
 
-                // Check if the card has the tag or if 'all' was clicked
-                if (filterValue === 'all' || (cardTags && cardTags.includes(filterValue))) {
+                // Check if 'all' is selected OR if the card's tags contain the filter value.
+                // We use .toLowerCase() on both sides to ensure "Graphic Design" matches "graphic design".
+                if (filterValue === 'all' || (cardTags && cardTags.toLowerCase().includes(filterValue.toLowerCase()))) {
                     card.classList.remove('hide'); // Show the card
                 } else {
                     card.classList.add('hide'); // Hide the card

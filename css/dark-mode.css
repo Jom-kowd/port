@@ -466,3 +466,32 @@ body.dark-mode .tag-pill {
     color: var(--light-text);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* --- Project Detail Page Dark Mode --- */
+
+body.dark-mode .sidebar-card,
+body.dark-mode .comments-wrapper {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .hero-media-wrapper,
+body.dark-mode .gallery-item {
+    border-color: var(--border-color);
+}
+
+body.dark-mode .content-card p {
+    color: var(--light-text);
+}
+
+body.dark-mode .content-card h2,
+body.dark-mode .sidebar-card h3 {
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .back-link {
+    color: var(--secondary-color);
+}
+body.dark-mode .back-link:hover {
+    color: var(--primary-color);
+}

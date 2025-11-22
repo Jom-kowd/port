@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Get references to all the parts of our template
+    // References
     const loadingEl = document.getElementById('project-loading');
     const dataEl = document.getElementById('project-data');
     const errorEl = document.getElementById('project-error');
 
-    // Get references to the content holders
+    // Content Elements
     const titleEl = document.getElementById('project-title');
     const shortDescEl = document.getElementById('project-short-desc');
     const imageEl = document.getElementById('project-image');
@@ -13,87 +13,76 @@ document.addEventListener('DOMContentLoaded', () => {
     const tagsEl = document.getElementById('project-tags');
     const liveLinkEl = document.getElementById('project-live-link');
     const codeLinkEl = document.getElementById('project-code-link');
+    const gallerySection = document.getElementById('gallery-section');
+    const galleryGrid = document.getElementById('project-gallery-grid');
 
-    /**
-     * Finds the project data and populates the page
-     */
     async function loadProjectDetails() {
         try {
-            // 1. Get the project ID from the URL
+            // 1. Get ID from URL
             const urlParams = new URLSearchParams(window.location.search);
             const projectId = urlParams.get('id');
 
-            if (!projectId) {
-                // If no ID, show error
-                throw new Error('No project ID provided');
-            }
+            if (!projectId) throw new Error('No project ID provided');
 
-            // 2. Fetch the projects data
-            // We are in /js/, so we go up one level (..) then into /data/
-            const response = await fetch('../data/projects.json');
-            if (!response.ok) {
-                throw new Error('Projects data file not found');
-            }
+            // 2. Fetch Data
+            const response = await fetch('data/projects.json');
+            if (!response.ok) throw new Error('Projects data file not found');
             const projects = await response.json();
 
-            // 3. Find the correct project
+            // 3. Find Project
             const project = projects.find(p => p.id === projectId);
+            if (!project) throw new Error('Project not found');
 
-            if (!project) {
-                // If project not found, show error
-                throw new Error('Project not found');
-            }
-
-            // 4. Populate the page with the project data
-            
-            // Set document title
-            document.title = project.title + ' - Project Details'; 
-
-            // Fill in the template
+            // 4. Populate Content
+            document.title = project.title + ' - Project Details';
             titleEl.textContent = project.title;
             shortDescEl.textContent = project.short_desc;
             imageEl.src = project.image;
-            imageEl.alt = project.title + ' main image';
+            imageEl.alt = project.title;
             longDescEl.textContent = project.long_desc;
-
-            // Set links
+            
             liveLinkEl.href = project.live_url;
             codeLinkEl.href = project.code_url;
 
-            // Create and add tags
-            tagsEl.innerHTML = ''; // Clear any existing tags
-            project.tags.forEach(tag => {
-                const tagSpan = document.createElement('span');
-                tagSpan.textContent = tag;
-                tagsEl.appendChild(tagSpan);
-            });
-            
-            // 5. Show the data and hide the loading message
-            dataEl.style.display = 'block';
-            loadingEl.style.display = 'none';
+            // Tags (Pills)
+            tagsEl.innerHTML = project.tags.map(tag => `<span class="tag-pill">${tag}</span>`).join('');
 
-            // 6. Load the comments for this specific project
+            // 5. Handle Gallery
+            if (project.gallery && project.gallery.length > 0) {
+                gallerySection.style.display = 'block';
+                galleryGrid.innerHTML = project.gallery.map(imgSrc => `
+                    <div class="gallery-item">
+                        <img src="${imgSrc}" alt="Project screenshot">
+                    </div>
+                `).join('');
+            } else {
+                gallerySection.style.display = 'none';
+            }
+            
+            // 6. Show Page
+            loadingEl.style.display = 'none';
+            dataEl.style.display = 'block';
+
+            // Re-run Scroll Reveal if available
+            if (typeof initializeScrollReveal === 'function') {
+                // Small delay to ensure DOM is rendered
+                setTimeout(initializeScrollReveal, 100);
+            }
+
+            // 7. Load Comments
             loadDisqusComments(project.id, project.title);
 
         } catch (error) {
-            // If anything went wrong, show the error message
-            console.error('Error loading project:', error.message);
+            console.error('Error:', error.message);
             loadingEl.style.display = 'none';
             errorEl.style.display = 'block';
         }
     }
 
-    /**
-     * Loads the Disqus comment thread for a specific page.
-     * @param {string} projectId - The unique ID of the project (e.g., "project-1")
-     * @param {string} projectTitle - The title of the project
-     */
     function loadDisqusComments(projectId, projectTitle) {
-        // ### PUT YOUR DISQUS SHORTNAME HERE ###
-        // Remember to replace 'YOUR_SHORTNAME_HERE' with your actual Disqus shortname
+        // ### REPLACE THIS WITH YOUR ACTUAL DISQUS SHORTNAME ###
         const DISQUS_SHORTNAME = 'my-portfolio-tphd8res2o'; 
 
-        // This configuration tells Disqus what page it's on.
         var disqus_config = function () {
             this.page.url = window.location.href;  
             this.page.identifier = projectId; 
@@ -109,6 +98,5 @@ document.addEventListener('DOMContentLoaded', () => {
         })();
     }
 
-    // Run the main function
     loadProjectDetails();
 });
