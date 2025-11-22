@@ -27,9 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
             new TypeIt("#hero-headline", {
                 strings: [
                     "Hi, I'm Mark Jomar S. Calmateo.",
-                    "I'm an Aspiring Full Stack Developer.",
+                    "I'm a Front-End Developer.",     // Changed from Aspiring Full Stack
+                    "I'm a Graphic Designer.",        // Added from Resume 
                     "I build digital solutions from the Philippines 🇵🇭."
                 ],
+                // ... rest of your settings
                 speed: 60,         // How fast it types
                 breakLines: false, // Don't add <br> tags
                 waitUntilVisible: true, // Wait until the element is on screen
