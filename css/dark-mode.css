@@ -229,3 +229,50 @@ body.dark-mode .footer-bottom {
 body.dark-mode .dashboard-link {
     color: var(--secondary-color);
 }
+
+/* --- Modern Footer Dark Mode Overrides --- */
+body.dark-mode .modern-footer {
+    background-color: var(--card-bg); /* Dark Navy */
+    color: var(--light-text);
+    border-top: 1px solid var(--border-color);
+    box-shadow: none;
+}
+
+body.dark-mode .footer-col h4 {
+    color: var(--light-text);
+}
+
+body.dark-mode .brand-col .logo {
+    color: var(--light-text);
+}
+body.dark-mode .brand-col .footer-desc {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .location-badge span {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--light-text);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav-col .footer-links a {
+    color: var(--secondary-color);
+}
+body.dark-mode .nav-col .footer-links a:hover {
+    color: var(--primary-color);
+}
+
+body.dark-mode .social-icon {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--light-text);
+}
+body.dark-mode .social-icon:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: var(--border-color);
+    color: var(--secondary-color);
+}

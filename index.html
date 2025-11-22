@@ -4,101 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Jomar Calmateo - Full Stack Developer</title>
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='7 8 3 12 7 16'%3E%3C/polyline%3E%3Cpolyline points='17 8 21 12 17 16'%3E%3C/polyline%3E%3Cline x1='13' y1='5' x2='11' y2='19'%3E%3C/line%3E%3C/svg%3E">
     
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='7 8 3 12 7 16'%3E%3C/polyline%3E%3Cpolyline points='17 8 21 12 17 16'%3E%3C/polyline%3E%3Cline x1='13' y1='5' x2='11' y2='19'%3E%3C/line%3E%3C/svg%3E">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TLNBD30VM"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-5TLNBD30VM');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5TLNBD30VM');
     </script>
 
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" defer></script>
-
 </head>
 <body>
+    
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">Jom.dev</a>
+            <a href="index.html" class="logo">JOMKOWD</a>
             <ul class="nav-links">
-                <li><a href="index.html"class="active">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="certificates.html" >Certificates</a></li>
-                <li><a href="contact.html" >Contact</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="theme-toggle">
-                    <input type="checkbox" id="theme-toggle" />
-                    <span class="slider round"></span>
-                </label>
+            
+            <div class="nav-actions">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-toggle">
+                        <input type="checkbox" id="theme-toggle" />
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
+        
         <section id="hero" class="fade-in-element">
             <div class="container hero-content">
-                    <div class="hero-text">
-                        <h1 id="hero-headline">Hi, I'm Mark Jomar S. Calmateo.<br>Front-End Developer & Graphic Designer building digital solutions from the Philippines 🇵🇭.</h1>
-                        
-                        <p class="sub-headline">I bridge the gap between design and engineering, translating wireframes into clean, efficient code with a focus on UI/UX principles.</p>
-                        
-                        <div class="cta-buttons">
-                            <a href="portfolio.html" class="btn btn-primary">View My Projects</a>
-                            <a href="contact.html" class="btn btn-secondary">Contact Me</a>
-                        </div>
+                <div class="hero-text">
+                    <span class="greeting-badge">Welcome to my portfolio</span>
+                    
+                    <h1 id="hero-headline">Hi, I'm Mark Jomar.<br>Building digital solutions from the Philippines 🇵🇭.</h1>
+                    
+                    <p class="sub-headline">I bridge the gap between design and engineering, translating wireframes into clean, efficient code with a focus on UI/UX principles.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="portfolio.html" class="btn btn-primary">View My Projects</a>
+                        <a href="contact.html" class="btn btn-secondary">Contact Me</a>
                     </div>
+                </div>
+                
                 <div class="hero-image">
-                    <img src="images/profile-photo.jpg" alt="Mark Jomar Calmateo, Full Stack Developer">
+                    <div class="image-wrapper">
+                        <img src="images/profile-photo.jpg" alt="Mark Jomar Calmateo">
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="home-about" class="container fade-in-element">
-            <div class="home-about-image">
-                <img src="images/profile-photo.jpg" alt="About me profile picture">
-            </div>
-            <div class="home-about-text">
-                <h2 style="text-align: left;">A Little About Me</h2>
-                <p>I'm a developer based in the Philippines with a passion for turning complex ideas into seamless, user-friendly digital solutions. My journey into tech is driven by the challenge of solving problems and building things that make a difference.</p>
-                <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
+            <div class="about-card-wrapper">
+                <div class="home-about-image">
+                    <img src="images/profile-photo.jpg" alt="About me profile picture">
+                </div>
+                <div class="home-about-text">
+                    <h2>A Little About Me</h2>
+                    <p>I'm a developer based in the Philippines with a passion for turning complex ideas into seamless, user-friendly digital solutions. My journey into tech is driven by the challenge of solving problems and building things that make a difference.</p>
+                    <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
+                </div>
             </div>
         </section>
 
         <section id="home-skills" class="container fade-in-element">
-            <h2>My Top Skills</h2>
-            <p class="sub-headline">I work with a modern tech stack to build fast and scalable applications.</p>
-            <div class="home-skills-grid">
-                <div class="skill-item"><i class="devicon-react-original"></i><span>React</span></div>
-                <div class="skill-item"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
-                <div class="skill-item"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
-                <div class="skill-item"><i class="devicon-python-plain"></i><span>Python</span></div>
-                <div class="skill-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
-                <div class="skill-item"><i class="devicon-git-plain"></i><span>Git</span></div>
+            <div class="section-header">
+                <h2>My Top Skills</h2>
+                <p class="sub-headline">I work with a modern tech stack to build fast and scalable applications.</p>
             </div>
-            <a href="skills.html" class="btn btn-primary" style="margin-top: 2rem;">See All My Skills</a>
+            
+            <div class="home-skills-grid">
+                <div class="skill-item" title="React"><i class="devicon-react-original"></i><span>React</span></div>
+                <div class="skill-item" title="Node.js"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+                <div class="skill-item" title="MongoDB"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
+                <div class="skill-item" title="Python"><i class="devicon-python-plain"></i><span>Python</span></div>
+                <div class="skill-item" title="Docker"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+                <div class="skill-item" title="Git"><i class="devicon-git-plain"></i><span>Git</span></div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="skills.html" class="btn btn-primary">See All My Skills</a>
+            </div>
         </section>
 
         <section id="featured-projects" class="container fade-in-element">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <h3 class="page-title" style="font-size: 1.5rem; text-align: center; grid-column: 1 / -1;">Loading Projects...</h3>
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p class="sub-headline">A selection of my recent work.</p>
             </div>
-            <a href="portfolio.html" class="btn btn-primary" style="margin-top: 2rem; display: inline-block;">View All Projects</a>
+
+            <div class="project-grid">
+                <h3 class="page-title" style="font-size: 1.5rem; text-align: center; grid-column: 1 / -1; opacity: 0.7;">Loading Projects...</h3>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="portfolio.html" class="btn btn-primary">View All Projects</a>
+            </div>
         </section>
         
         <section id="home-cta" class="container fade-in-element">
@@ -109,35 +134,58 @@
 
     </main>
 
-    <footer>
-        <div class="container footer-grid-minimal">
-            <div class="footer-col-left">
-                <a href="index.html" class="logo">MarkJomar.dev</a>
-                <p class="footer-tagline">Full Stack Developer<br>Based in the Philippines 🇵🇭</p>
-            </div>
-            
-            <div class="footer-col-right">
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="certificates.html">Certs</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
                 
-            </div>
-            <div class="footer-col-center">
-                <div class="social-links">
-                    <a href="#" target="_blank" aria-label="GitHub"><i class="devicon-github-original"></i></a>
-                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
-                    <a href="#" target="_blank" aria-label="Facebook"><i class="devicon-facebook-plain"></i></a>
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo">JOMKOWD</a>
+                    <p class="footer-desc">
+                        Full Stack Developer & Graphic Designer.<br>
+                        Turning ideas into real-world digital solutions.
+                    </p>
+                    <div class="location-badge">
+                        <span>Based in the Philippines 🇵🇭</span>
+                    </div>
+                </div>
+
+                <div class="footer-col nav-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col social-col">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="GitHub" class="social-icon">
+                            <i class="devicon-github-original"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="LinkedIn" class="social-icon">
+                            <i class="devicon-linkedin-plain"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Facebook" class="social-icon">
+                            <i class="devicon-facebook-plain"></i>
+                        </a>
+                    </div>
+                    <a href="contact.html" class="btn-text">
+                        Send me a message &rarr;
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Mark Jomar Calmateo. All rights reserved.</p>
-            <a href="https://analytics.google.com/" target="_blank" class="dashboard-link">Dashboard</a>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mark Jomar Calmateo. All rights reserved.</p>
+                <div class="footer-meta">
+                    <a href="https://analytics.google.com/" target="_blank" class="dashboard-link">Dashboard</a>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -148,15 +196,15 @@
     <script src="js/page-transitions.js" defer></script>
     
     <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68ffadb2108634194eef37ee/1j8jbt13i';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68ffadb2108634194eef37ee/1j8jbt13i';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
 </body>
 </html>
