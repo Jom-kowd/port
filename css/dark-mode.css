@@ -276,3 +276,102 @@ body.dark-mode .footer-bottom {
     border-top-color: var(--border-color);
     color: var(--secondary-color);
 }
+
+/* Contact Page Dark Mode Updates */
+
+body.dark-mode .contact-wrapper {
+    border-color: var(--border-color);
+}
+
+/* Form inputs in dark mode */
+body.dark-mode .modern-form input,
+body.dark-mode .modern-form textarea {
+    background-color: rgba(0, 0, 0, 0.2); /* Darker input bg */
+    border-color: var(--border-color);
+    color: var(--light-text);
+}
+
+body.dark-mode .modern-form input:focus,
+body.dark-mode .modern-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* Ensure Sidebar text stays white (it has a gradient bg) */
+body.dark-mode .contact-sidebar {
+    /* Gradient remains, so text should stay white */
+    color: #fff;
+}
+/* --- Skills Page Dark Mode --- */
+
+body.dark-mode .tech-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .tech-card-header {
+    border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .tech-card-header .icon-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Tech Item Dark Mode Hover */
+body.dark-mode .tech-item:hover {
+    background: rgba(100, 255, 218, 0.05); /* Very subtle primary color tint */
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.1); /* Glow effect */
+}
+
+body.dark-mode .tech-item span {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .tech-item:hover span {
+    color: var(--primary-color);
+}
+
+/* Handle Express icon (which is usually black) in dark mode */
+body.dark-mode .devicon-express-original {
+    color: #fff;
+}
+
+/* --- About Page Dark Mode --- */
+
+body.dark-mode .profile-card-modern {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .role-badge {
+    background: rgba(100, 255, 218, 0.1); /* Mint tint */
+    color: var(--primary-color);
+}
+
+body.dark-mode .role-badge-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--secondary-color);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .stat-number {
+    color: var(--light-text);
+}
+
+body.dark-mode .timeline {
+    border-left-color: var(--border-color);
+}
+
+body.dark-mode .timeline-marker {
+    background: var(--card-bg);
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .timeline-content {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .content-block h2 {
+    border-bottom-color: var(--border-color);
+}

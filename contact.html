@@ -48,40 +48,72 @@
     </header>
 
     <main>
-        <section id="contact-page" class="container">
-            <h1 class="page-title">Get In Touch</h1>
-            <p class="sub-headline">I'm always open to discussing new projects, creative ideas, or opportunities. Let's build something great together.</p>
+        <section id="contact-page" class="container fade-in-element">
+            
+            <div class="contact-header-center">
+                <h1 class="page-title">Let's Work Together</h1>
+                <p class="sub-headline">Have a project in mind or just want to say hi? Fill out the form below or send me an email.</p>
+            </div>
 
-            <div class="contact-grid">
-                <div class="contact-form-container">
-                    <h3>Send Me a Message</h3>
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+            <div class="contact-wrapper">
+                
+                <div class="contact-sidebar">
+                    <div class="sidebar-content">
+                        <h3>Contact Information</h3>
+                        <p class="sidebar-text">I'm currently available for freelance work and collaboration.</p>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <i class="devicon-google-plain"></i>
+                                <span>your.email@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="devicon-linkedin-plain"></i>
+                                <span>linkedin.com/in/yourprofile</span>
+                            </div>
+                            <div class="info-item location">
+                                <span>📍 Based in the Philippines 🇵🇭</span>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+
+                        <div class="sidebar-socials">
+                            <p>Follow my work:</p>
+                            <div class="social-icons">
+                                <a href="#" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="#" target="_blank"><i class="devicon-facebook-plain"></i></a>
+                                <a href="#" target="_blank"><i class="devicon-twitter-original"></i></a>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-area">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="modern-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry..." required>
+                        </div>
+
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+
+                        <button type="submit" class="btn btn-primary full-width-btn">Send Message</button>
                     </form>
                 </div>
 
-                <div class="contact-info">
-                    <h3>Contact Details</h3>
-                    <p>You can also reach me here:</p>
-                    <ul>
-                        <li><strong>Email:</strong> your.email@example.com</li>
-                        <li><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</li>
-                        <li><strong>GitHub:</strong> github.com/yourusername</li>
-                    </ul>
-                    <p>Based in the Philippines 🇵🇭</p>
-                </div>
             </div>
         </section>
     </main>

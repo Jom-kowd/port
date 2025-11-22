@@ -1023,3 +1023,525 @@ footer {
         gap: 1rem;
     }
 }
+
+/* --- Modern Contact Page Design --- */
+
+/* Header Centering */
+.contact-header-center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+}
+
+/* The Main Wrapper (Split Card) */
+.contact-wrapper {
+    display: flex;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden; /* Ensures child elements don't spill out */
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+}
+
+/* --- Left Sidebar Styling --- */
+.contact-sidebar {
+    flex: 1; /* Takes up 1 part of space */
+    background: var(--primary-gradient);
+    color: #fff;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Decorative pattern overlay for sidebar */
+.contact-sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiZmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+');
+    opacity: 0.3;
+}
+
+.sidebar-content {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-sidebar h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.sidebar-text {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+    color: #fff;
+}
+
+/* Info List (Email, Location) */
+.info-list {
+    margin-bottom: 3rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+/* Sidebar Socials */
+.sidebar-socials p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    opacity: 1;
+}
+
+/* --- Right Form Area Styling --- */
+.contact-form-area {
+    flex: 1.5; /* Takes up 1.5 parts of space (wider) */
+    padding: 3rem;
+    background-color: var(--card-bg);
+}
+
+.modern-form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--dark-text);
+}
+
+.modern-form input,
+.modern-form textarea {
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--light-bg);
+    font-family: var(--font-main);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modern-form input:focus,
+.modern-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+}
+
+/* Form Grid for Name/Email side-by-side */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.full-width-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    
+    .contact-sidebar {
+        padding: 2.5rem;
+        text-align: center;
+    }
+    
+    .info-item {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr; /* Stack inputs */
+        gap: 0;
+    }
+    
+    .contact-form-area {
+        padding: 2rem;
+    }
+}
+
+/* --- New Skills Page Design --- */
+
+#skills-page {
+    padding: 4rem 0;
+}
+
+.skills-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+}
+
+/* Masonry-like Grid for Categories */
+.tech-stack-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Individual Category Card */
+.tech-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Card Header */
+.tech-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tech-card-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.tech-card-header .icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background: var(--light-bg);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* The Grid of Icons inside the card */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
+    gap: 1.5rem;
+}
+
+/* Individual Skill Item */
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.tech-item i {
+    font-size: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.tech-item span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+/* --- THE HOVER EFFECT --- */
+.tech-item:hover {
+    background: var(--light-bg);
+    border-color: rgba(0, 123, 255, 0.1);
+    transform: translateY(-5px) scale(1.05);
+}
+
+.tech-item:hover i {
+    transform: scale(1.1);
+}
+
+.tech-item:hover span {
+    color: var(--primary-color);
+    opacity: 1;
+    font-weight: 600;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 500px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 icons per row on mobile */
+    }
+}
+
+/* --- Modern About Page Styles --- */
+
+#about-page {
+    padding: 4rem 0;
+}
+
+.about-header-center {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 4rem auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr; /* Sidebar is fixed width, Content takes rest */
+    gap: 4rem;
+    align-items: start;
+}
+
+/* --- Profile Card (Left Sidebar) --- */
+.about-sidebar {
+    position: sticky; /* Keeps it visible while scrolling */
+    top: 6rem; 
+}
+
+.profile-card-modern {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+/* Stylish Image Frame */
+.image-frame {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Soft square */
+    position: relative;
+    z-index: 2;
+}
+
+/* The offset border effect */
+.frame-accent {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.profile-card-modern:hover .frame-accent {
+    transform: translate(5px, 5px); /* Moves slightly on hover */
+}
+
+/* Sidebar Text */
+.sidebar-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.role-badge, .role-badge-secondary {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0 0.2rem;
+}
+
+.role-badge {
+    background: rgba(0, 123, 255, 0.1);
+    color: var(--primary-color);
+}
+
+.role-badge-secondary {
+    background: var(--light-bg);
+    color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+}
+
+/* Quick Stats Grid */
+.quick-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--dark-text);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.social-mini-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.social-mini-links i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+.social-mini-links i:hover {
+    color: var(--primary-color);
+}
+
+/* --- Right Content & Timeline --- */
+.content-block {
+    margin-bottom: 4rem;
+}
+
+.content-block h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-bg);
+    display: inline-block;
+}
+
+/* The Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* The Dot on the line */
+.timeline-marker {
+    position: absolute;
+    left: -2.6rem; /* Adjust to sit on the line */
+    top: 0.5rem;
+    width: 16px;
+    height: 16px;
+    background: var(--card-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color); /* Subtle border */
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(5px); /* Subtle nudge right */
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Responsive About Page --- */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Stack them */
+        gap: 3rem;
+    }
+    
+    .about-sidebar {
+        position: static; /* Remove sticky on mobile */
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .about-header-center {
+        margin-bottom: 2rem;
+    }
+}
