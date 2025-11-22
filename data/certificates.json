@@ -1,27 +1,93 @@
 [
   {
-    "title": "CSS Essentials",
-    "issuer": "Cisco Networking Academy",
-    "url": "certificates/CSSEssentialsv120250407-27-6gdqmg.pdf"
+    "title": "B.A.S.I.C: Innovative CapCut & Vlogging",
+    "issuer": "Mindoro State University",
+    "date": "Nov 15, 2025",
+    "category": "Creative",
+    "url": "certificates/B.A.S.I.C.jpg"
+  },
+  {
+    "title": "Data Visualization Workshop",
+    "issuer": "Zuitt Coding Bootcamp",
+    "date": "Nov 08, 2025",
+    "category": "Data",
+    "url": "certificates/Data Visualization Workshop (Nov 08) - Certificate of Participation (1).pdf"
+  },
+  {
+    "title": "Stay Safe Online: Cybersecurity Basics",
+    "issuer": "DICT Region 3",
+    "date": "Nov 08, 2025",
+    "category": "Security",
+    "url": "certificates/Stay Safe Online Cybersecurity Basics.pdf"
+  },
+  {
+    "title": "Project GAB-AI: Generative AI Awareness",
+    "issuer": "Mindoro State U & JPCS",
+    "date": "Nov 08, 2025",
+    "category": "AI",
+    "url": "certificates/Project GAB-AI.pdf"
+  },
+  {
+    "title": "Software for Qualitative Data Analysis",
+    "issuer": "Philippine Normal University",
+    "date": "Nov 08, 2025",
+    "category": "Data",
+    "url": "certificates/data analysis.pdf"
+  },
+  {
+    "title": "Integrating Intelligence: Embedded Systems",
+    "issuer": "GC Bitbarkada",
+    "date": "Nov 08, 2025",
+    "category": "Hardware",
+    "url": "certificates/Bitbarkada Intergrating Intelegence.pdf"
+  },
+  {
+    "title": "Project OWN IT: Intellectual Property",
+    "issuer": "Mindoro State University",
+    "date": "Nov 08, 2025",
+    "category": "General",
+    "url": "certificates/OWN IT.png"
+  },
+  {
+    "title": "Hour of Code: AI Ready ASEAN",
+    "issuer": "ASEAN Foundation",
+    "date": "Nov 01, 2025",
+    "category": "AI",
+    "url": "certificates/“Hour of Code”.pdf"
+  },
+  {
+    "title": "Cybersecurity Awareness & Nat'l Plan",
+    "issuer": "DICT Region 3",
+    "date": "Oct 30, 2025",
+    "category": "Security",
+    "url": "certificates/Cybersecurity Awareness and National Cybersecurity Plan 2023-2028.pdf"
   },
   {
     "title": "JavaScript Essentials 2",
     "issuer": "Cisco Networking Academy",
+    "date": "Apr 07, 2025",
+    "category": "Code",
     "url": "certificates/JavaScriptEssentials2Update20250407-28-mx6xhk badge.pdf"
   },
   {
-    "title": "Maintaining Computer Systems and Networks",
+    "title": "CSS Essentials",
+    "issuer": "Cisco Networking Academy",
+    "date": "Apr 07, 2025",
+    "category": "Code",
+    "url": "certificates/CSSEssentialsv120250407-27-6gdqmg.pdf"
+  },
+  {
+    "title": "Installing & Configuring Computer Systems",
     "issuer": "TESDA",
-    "url": "certificates/Maintaining Computer Systems and Networks - Copy.pdf"
+    "date": "Mar 30, 2023",
+    "category": "Hardware",
+    "url": "certificates/Installing and Configuring Computer Systems.pdf"
   },
   {
     "title": "Setting Up Computer Servers",
     "issuer": "TESDA",
+    "date": "May 11, 2023",
+    "category": "Hardware",
     "url": "certificates/Setting Up Computer Servers.pdf"
-  },
-  {
-    "title": "Installing and Configuring Computer Systems",
-    "issuer": "TESDA",
-    "url": "certificates/Installing and Configuring Computer Systems.pdf"
   }
 ]

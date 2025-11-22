@@ -400,3 +400,35 @@ body.dark-mode .content-block h2 {
         background-color: var(--light-text);
     }
 }
+/* --- Certificates Dark Mode --- */
+
+body.dark-mode .cert-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .cert-icon-box, 
+body.dark-mode .cert-date {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--light-text);
+}
+
+/* In Dark Mode, keep the accent colors on icons, but make background subtle */
+body.dark-mode .cert-security .cert-icon-box { color: #ff6b6b; background: rgba(255, 107, 107, 0.1); }
+body.dark-mode .cert-ai .cert-icon-box { color: #c77dff; background: rgba(199, 125, 255, 0.1); }
+body.dark-mode .cert-code .cert-icon-box { color: #4cc9f0; background: rgba(76, 201, 240, 0.1); }
+
+body.dark-mode .cert-title {
+    color: var(--light-text);
+}
+
+body.dark-mode .view-cert-btn {
+    border-color: var(--border-color);
+    color: var(--secondary-color);
+}
+
+body.dark-mode .view-cert-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
