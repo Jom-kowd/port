@@ -2650,3 +2650,60 @@ body.dark-mode .cta-modern-card p {
     color: #fff;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
+
+/* --- Global Chat Page Styles --- */
+
+.chat-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: start;
+}
+
+.chat-container {
+    height: 600px; /* Fixed height for chat window */
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-sidebar-info {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.chat-sidebar-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.chat-sidebar-info ul {
+    padding-left: 1.2rem;
+}
+
+.chat-sidebar-info li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* Responsive Chat */
+@media (max-width: 800px) {
+    .chat-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .chat-container {
+        height: 500px; /* Slightly shorter on mobile */
+    }
+}
