@@ -2431,3 +2431,56 @@ body.dark-mode .cta-modern-card p {
         justify-content: center;
     }
 }
+
+/* --- Bio Card Design (Add to css/style.css) --- */
+
+.bio-card {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color); /* Accent bar on the left */
+    position: relative;
+    overflow: hidden; /* Keeps the background icon inside */
+    transition: transform 0.3s ease;
+}
+
+.bio-card:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* Gradient Text for the Heading */
+.text-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-weight: 800;
+}
+
+/* Highlight spans for emphasis */
+.highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* The subtle background icon watermark */
+.bio-bg-icon {
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+    font-size: 12rem;
+    color: var(--dark-text);
+    opacity: 0.03; /* Very subtle opacity */
+    transform: rotate(-15deg);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure text stays on top of the icon */
+.bio-card p, 
+.bio-card h2 {
+    position: relative;
+    z-index: 1;
+}

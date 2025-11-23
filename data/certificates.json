@@ -89,5 +89,21 @@
     "date": "May 11, 2023",
     "category": "Hardware",
     "url": "certificates/Setting Up Computer Servers.pdf"
+  },
+  {
+    "title": "Computer System Servicing NC II",
+    "issuer": "TESDA",
+    "date": "Sep 21, 2025",
+    "category": "Hardware",
+    "url": "#" 
+  },
+  {
+    "title": "Computer Literacy Program",
+    "issuer": "Ralmex Opportunity Skill Development Services / C.A.B Industrial Technological Institute",
+    "date": "Nov 11, 2018",
+    "category": "General",
+    "url": "#" 
   }
+  
 ]
+
