@@ -2707,3 +2707,161 @@ body.dark-mode .cta-modern-card p {
         height: 500px; /* Slightly shorter on mobile */
     }
 }
+
+/* --- Terminal Mode Styles --- */
+
+/* The Toggle Button in Nav */
+.terminal-btn {
+    background: transparent;
+    border: 1px solid var(--dark-text);
+    color: var(--dark-text);
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.terminal-btn:hover {
+    background: #000;
+    color: #0f0;
+    border-color: #0f0;
+    box-shadow: 0 0 10px #0f0;
+}
+
+/* The Modal Overlay */
+.terminal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.terminal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* The Terminal Window */
+.terminal-window {
+    width: 800px;
+    max-width: 90%;
+    height: 500px;
+    background-color: #0c0c0c; /* Deep black */
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', monospace; /* Retro font */
+    border: 1px solid #333;
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.terminal-overlay.active .terminal-window {
+    transform: scale(1);
+}
+
+/* Header Bar */
+.terminal-header {
+    background: #1f1f1f;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    border-radius: 8px 8px 0 0;
+}
+
+.terminal-title {
+    color: #ccc;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.terminal-close {
+    background: #ff5f56;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    color: transparent;
+    cursor: pointer;
+}
+.terminal-close:hover {
+    background: #ff3b30;
+}
+
+/* Terminal Body */
+.terminal-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    color: #0f0; /* Hacker Green */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Scrollbar for terminal */
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
+}
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+.terminal-line {
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Keeps formatting */
+}
+
+.cmd-highlight {
+    color: #fff;
+    font-weight: bold;
+}
+
+.command-line {
+    color: #fff;
+    opacity: 0.8;
+}
+
+/* Input Area */
+.terminal-input-area {
+    display: flex;
+    padding: 10px 15px;
+    background: #0c0c0c;
+    border-radius: 0 0 8px 8px;
+}
+
+.prompt {
+    color: #007BFF; /* Blue prompt like Linux */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#terminal-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    flex-grow: 1;
+    outline: none;
+    caret-color: #0f0; /* Green cursor */
+}
