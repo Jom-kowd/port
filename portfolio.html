@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364FFDA' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='7 8 3 12 7 16'%3E%3C/polyline%3E%3Cpolyline points='17 8 21 12 17 16'%3E%3C/polyline%3E%3Cline x1='13' y1='5' x2='11' y2='19'%3E%3C/line%3E%3C/svg%3E">
@@ -33,9 +32,14 @@
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="portfolio.html" class="active">Portfolio</a></li>
                 <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="global-chat.html">Chat</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-actions">
+                <button id="terminal-toggle" class="terminal-btn" aria-label="Open Terminal">
+                    <i class="fa-solid fa-terminal"></i>
+                </button>
+
                 <div class="theme-switch-wrapper">
                     <label class="theme-switch" for="theme-toggle">
                         <input type="checkbox" id="theme-toggle" />
@@ -119,9 +123,29 @@
     <script src="js/main.js"></script>
     <script src="js/theme-toggle.js"></script>
     <script src="js/page-transitions.js" defer></script>
-    
     <script src="js/portfolio-loader.js" defer></script>
     <script src="js/project-filter.js" defer></script>
     <script src="js/scroll-reveal.js" defer></script>
+    
+    <div id="terminal-modal" class="terminal-overlay">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-title">
+                    <i class="fa-solid fa-user-secret"></i> JOMKOWD_TERMINAL -- bash -- 80x24
+                </div>
+                <button id="close-terminal" class="terminal-close">&times;</button>
+            </div>
+            <div class="terminal-body" id="terminal-output">
+                <div class="terminal-line">Welcome to JomKowd v2.0.0 (WebTerm)</div>
+                <div class="terminal-line">Type <span class="cmd-highlight">'help'</span> to see available commands.</div>
+                <div class="terminal-line"><br></div>
+            </div>
+            <div class="terminal-input-area">
+                <span class="prompt">visitor@jomkowd:~$</span>
+                <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+    <script src="js/terminal.js"></script>
 </body>
 </html>

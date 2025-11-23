@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364FFDA' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='7 8 3 12 7 16'%3E%3C/polyline%3E%3Cpolyline points='17 8 21 12 17 16'%3E%3C/polyline%3E%3Cline x1='13' y1='5' x2='11' y2='19'%3E%3C/line%3E%3C/svg%3E">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TLNBD30VM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5TLNBD30VM');
-</script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TLNBD30VM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5TLNBD30VM');
+    </script>
 </head>
 <body>
     <header>
@@ -26,13 +26,18 @@
             <a href="index.html" class="logo">JOMKOWD</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html"class="active">About Me</a></li>
+                <li><a href="about.html" class="active">About Me</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="global-chat.html">Chat</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-actions">
+                <button id="terminal-toggle" class="terminal-btn" aria-label="Open Terminal">
+                    <i class="fa-solid fa-terminal"></i>
+                </button>
+
                 <div class="theme-switch-wrapper">
                     <label class="theme-switch" for="theme-toggle">
                         <input type="checkbox" id="theme-toggle" />
@@ -91,8 +96,8 @@
                                 <i class="devicon-chrome-plain" style="margin-right:8px; font-size:1rem;"></i> Download Resume
                             </a>
                             <div class="social-mini-links">
-                                <a href="#" target="_blank" aria-label="GitHub"><i class="devicon-github-original"></i></a>
-                                <a href="#" target="_blank" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+                                <a href="https://github.com/Jom-kowd" target="_blank" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+                                <a href="https://www.linkedin.com/in/markjomar-calmateo-684834366/" target="_blank" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
                             </div>
                         </div>
                     </div>
@@ -175,18 +180,10 @@
     <footer class="modern-footer">
         <div class="container">
             <div class="footer-content">
-                
                 <div class="footer-col brand-col">
                     <a href="index.html" class="logo">JOMKOWD</a>
-                    <p class="footer-desc">
-                        Full Stack Developer & Graphic Designer.<br>
-                        Turning ideas into real-world digital solutions.
-                    </p>
-                    <div class="location-badge">
-                        <span>Based in the Philippines 🇵🇭</span>
-                    </div>
+                    <p class="footer-desc">Full Stack Developer & Graphic Designer.<br>Based in the Philippines 🇵🇭</p>
                 </div>
-
                 <div class="footer-col nav-col">
                     <h4>Explore</h4>
                     <ul class="footer-links">
@@ -198,7 +195,6 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col social-col">
                     <h4>Connect</h4>
                     <div class="social-links">
@@ -217,7 +213,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2025 Mark Jomar Calmateo. All rights reserved.</p>
                 <div class="footer-meta">
@@ -231,18 +226,38 @@
     <script src="js/theme-toggle.js"></script>
     <script src="js/scroll-reveal.js" defer></script>
     <script src="js/page-transitions.js" defer></script>
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68ffadb2108634194eef37ee/1j8jbt13i';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-    </body>
+    
+    <div id="terminal-modal" class="terminal-overlay">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-title">
+                    <i class="fa-solid fa-user-secret"></i> JOMKOWD_TERMINAL -- bash -- 80x24
+                </div>
+                <button id="close-terminal" class="terminal-close">&times;</button>
+            </div>
+            <div class="terminal-body" id="terminal-output">
+                <div class="terminal-line">Welcome to JomKowd v2.0.0 (WebTerm)</div>
+                <div class="terminal-line">Type <span class="cmd-highlight">'help'</span> to see available commands.</div>
+                <div class="terminal-line"><br></div>
+            </div>
+            <div class="terminal-input-area">
+                <span class="prompt">visitor@jomkowd:~$</span>
+                <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+    <script src="js/terminal.js"></script>
+
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68ffadb2108634194eef37ee/1j8jbt13i';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+</body>
 </html>

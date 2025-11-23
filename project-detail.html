@@ -33,9 +33,14 @@
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="portfolio.html" class="active">Portfolio</a></li> 
                 <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="global-chat.html">Chat</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-actions">
+                <button id="terminal-toggle" class="terminal-btn" aria-label="Open Terminal">
+                    <i class="fa-solid fa-terminal"></i>
+                </button>
+
                 <div class="theme-switch-wrapper">
                     <label class="theme-switch" for="theme-toggle">
                         <input type="checkbox" id="theme-toggle" />
@@ -177,5 +182,26 @@
     <script src="js/scroll-reveal.js" defer></script>
     <script src="js/page-transitions.js" defer></script>
     <script src="js/project-loader.js" defer></script>
+    
+    <div id="terminal-modal" class="terminal-overlay">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-title">
+                    <i class="fa-solid fa-user-secret"></i> JOMKOWD_TERMINAL -- bash -- 80x24
+                </div>
+                <button id="close-terminal" class="terminal-close">&times;</button>
+            </div>
+            <div class="terminal-body" id="terminal-output">
+                <div class="terminal-line">Welcome to JomKowd v2.0.0 (WebTerm)</div>
+                <div class="terminal-line">Type <span class="cmd-highlight">'help'</span> to see available commands.</div>
+                <div class="terminal-line"><br></div>
+            </div>
+            <div class="terminal-input-area">
+                <span class="prompt">visitor@jomkowd:~$</span>
+                <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+    <script src="js/terminal.js"></script>
 </body>
 </html>
