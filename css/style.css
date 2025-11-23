@@ -2068,3 +2068,366 @@ footer {
         position: static; /* Remove sticky on mobile */
     }
 }
+
+/* --- NEW MODERN LAYOUT STYLES --- */
+
+/* Typography Accents */
+.accent-label {
+    color: var(--primary-color);
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.display-heading {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.text-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Modern Split Layout (About Section) */
+.modern-split-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.image-stack {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.image-stack .main-img {
+    position: relative;
+    z-index: 2;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-stack:hover .main-img {
+    transform: translate(-5px, -5px);
+}
+
+.stack-accent {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.image-stack:hover .stack-accent {
+    transform: translate(10px, 10px);
+}
+
+/* Modern Tech Grid (Skills Section) */
+.modern-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.tech-box {
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tech-box:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.tech-box i {
+    font-size: 2.5rem;
+}
+
+.tech-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.more-box {
+    background: var(--primary-gradient);
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+.more-box:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Modern CTA Card */
+.cta-modern-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.8rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+/* Decoration blob for CTA */
+.cta-decoration {
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: var(--primary-gradient);
+    filter: blur(80px);
+    opacity: 0.15;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .modern-split-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .split-image {
+        order: -1; /* Image on top mobile */
+        margin-bottom: 2rem;
+    }
+    
+    .display-heading {
+        font-size: 2.2rem;
+    }
+    
+    .cta-modern-card {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .mobile-hide {
+        display: none;
+    }
+}
+
+/* Fix for CTA Text Visibility */
+.cta-modern-card h2, 
+.cta-modern-card p {
+    color: var(--dark-text) !important; /* Overrides the white text from the parent section */
+}
+
+/* Ensure it stays light in Dark Mode */
+body.dark-mode .cta-modern-card h2, 
+body.dark-mode .cta-modern-card p {
+    color: var(--light-text) !important;
+}
+
+/* --- Modern Developer CTA Card --- */
+
+.cta-dev-card {
+    /* Always dark background for high contrast/impact */
+    background: #0f172a; 
+    border-radius: 24px;
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff; /* Force white text */
+}
+
+/* The Glow Effect behind the content */
+.cta-glow-bg {
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.15) 0%, rgba(0,0,0,0) 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cta-flex-layout {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.cta-text-group h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff !important; /* Override any global text colors */
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.cta-text-group p {
+    color: #94a3b8; /* Slate grey for subtitle */
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin-bottom: 0;
+}
+
+/* Status Badge (Green Dot) */
+.cta-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981; /* Green */
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Buttons */
+.cta-btn-group {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.btn-accent-glow {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3); /* Glow matching your primary color */
+}
+
+.btn-accent-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 123, 255, 0.5);
+    color: white;
+}
+
+.btn-glass-outline {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-glass-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .cta-flex-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-dev-card {
+        padding: 3rem 2rem;
+    }
+    
+    .cta-text-group p {
+        margin: 0 auto 2rem auto;
+    }
+    
+    .cta-btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-accent-glow, .btn-glass-outline {
+        width: 100%;
+        justify-content: center;
+    }
+}

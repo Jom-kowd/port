@@ -62,7 +62,10 @@
                     
                     <h1 id="hero-headline">Hi, I'm Mark Jomar.<br>Building digital solutions from the Philippines 🇵🇭.</h1>
                     
-                    <p class="sub-headline">I bridge the gap between design and engineering, translating wireframes into clean, efficient code with a focus on UI/UX principles.</p>
+                    <p class="sub-headline">
+                        As a Web Developer and Graphic Designer, I fuse technical expertise with creative vision. 
+                        I build high-performance websites and intuitive UI/UX designs that not only look exceptional but function flawlessly.
+                    </p> 
                     
                     <div class="cta-buttons">
                         <a href="portfolio.html" class="btn btn-primary">View My Projects</a>
@@ -78,61 +81,112 @@
             </div>
         </section>
 
-        <section id="home-about" class="container fade-in-element">
-            <div class="about-card-wrapper">
-                <div class="home-about-image">
-                    <img src="images/profile-photo.jpg" alt="About me profile picture">
-                </div>
-                <div class="home-about-text">
-                    <h2>A Little About Me</h2>
-                    <p>I'm a developer based in the Philippines with a passion for turning complex ideas into seamless, user-friendly digital solutions. My journey into tech is driven by the challenge of solving problems and building things that make a difference.</p>
-                    <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
-                </div>
+        <section id="home-about" class="container fade-in-element" style="margin-top: 6rem; margin-bottom: 6rem;">
+    <div class="modern-split-layout">
+        <div class="split-content">
+            <span class="accent-label">01. The Developer</span>
+            <h2 class="display-heading">I don't just write code.<br>I engineer <span class="text-gradient">experiences.</span></h2>
+            <p class="lead-text">
+                In a digital world cluttered with noise, I build clarity. As a developer based in the Philippines, 
+                I bridge the gap between complex backend logic and intuitive frontend design.
+            </p>
+            <p>
+                My philosophy is simple: <strong>Performance is paramount, and design is non-negotiable.</strong> 
+                Whether it's a sleek landing page or a robust web system, I bring a craftsman's attention to detail.
+            </p>
+            <div class="btn-group" style="margin-top: 2rem;">
+                <a href="about.html" class="btn btn-primary">Read My Story</a>
+                <a href="#featured-projects" class="btn btn-text">See my work &darr;</a>
             </div>
-        </section>
+        </div>
+        <div class="split-image">
+            <div class="image-stack">
+                <div class="stack-accent"></div>
+                <img src="images/profile-photo.jpg" alt="Mark Jomar at work" class="main-img">
+            </div>
+        </div>
+    </div>
+</section>
 
-        <section id="home-skills" class="container fade-in-element">
-            <div class="section-header">
-                <h2>My Top Skills</h2>
-                <p class="sub-headline">I work with a modern tech stack to build fast and scalable applications.</p>
+<section id="home-skills" class="fade-in-element" style="background: var(--card-bg); padding: 5rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+        <div class="section-header" style="text-align: left; max-width: 100%; display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap;">
+            <div>
+                <span class="accent-label">02. The Toolkit</span>
+                <h2 style="margin-bottom: 0;">Technologies I Master</h2>
             </div>
-            
-            <div class="home-skills-grid">
-                <div class="skill-item" title="React"><i class="devicon-react-original"></i><span>React</span></div>
-                <div class="skill-item" title="Node.js"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
-                <div class="skill-item" title="MongoDB"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
-                <div class="skill-item" title="Python"><i class="devicon-python-plain"></i><span>Python</span></div>
-                <div class="skill-item" title="Docker"><i class="devicon-docker-plain"></i><span>Docker</span></div>
-                <div class="skill-item" title="Git"><i class="devicon-git-plain"></i><span>Git</span></div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <a href="skills.html" class="btn btn-primary">See All My Skills</a>
-            </div>
-        </section>
+            <a href="skills.html" class="btn-text mobile-hide">View full arsenal &rarr;</a>
+        </div>
 
-        <section id="featured-projects" class="container fade-in-element">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p class="sub-headline">A selection of my recent work.</p>
+        <div class="modern-tech-grid">
+            <div class="tech-box">
+                <i class="devicon-react-original colored"></i>
+                <span class="tech-name">React</span>
             </div>
+            <div class="tech-box">
+                <i class="devicon-nodejs-plain colored"></i>
+                <span class="tech-name">Node.js</span>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-python-plain colored"></i>
+                <span class="tech-name">Python</span>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-mongodb-plain colored"></i>
+                <span class="tech-name">MongoDB</span>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-docker-plain colored"></i>
+                <span class="tech-name">Docker</span>
+            </div>
+            <div class="tech-box">
+                <i class="devicon-git-plain colored"></i>
+                <span class="tech-name">Git</span>
+            </div>
+            <a href="skills.html" class="tech-box more-box">
+                <span style="font-weight: 700; font-size: 1.2rem;">+10</span>
+                <span class="tech-name">More</span>
+            </a>
+        </div>
+    </div>
+</section>
 
-            <div class="project-grid">
-                <h3 class="page-title" style="font-size: 1.5rem; text-align: center; grid-column: 1 / -1; opacity: 0.7;">Loading Projects...</h3>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <a href="portfolio.html" class="btn btn-primary">View All Projects</a>
-            </div>
-        </section>
+<section id="featured-projects" class="container fade-in-element" style="margin-top: 6rem;">
+    <div class="section-header">
+        <span class="accent-label">03. Selected Works</span>
+        <h2>Recent Deployments</h2>
+        <p class="sub-headline">Real-world applications solving real-world problems.</p>
+    </div>
+
+    <div class="project-grid">
+        <h3 class="page-title" style="font-size: 1.5rem; text-align: center; grid-column: 1 / -1; opacity: 0.7;">Loading Projects...</h3>
+    </div>
+    
+    <div style="text-align: center; margin-top: 4rem;">
+        <a href="portfolio.html" class="btn btn-secondary">View Full Portfolio</a>
+    </div>
+</section>
+
+<section id="home-cta" class="container fade-in-element" style="margin-top: 8rem; margin-bottom: 6rem;">
+    <div class="cta-dev-card">
+        <div class="cta-glow-bg"></div>
         
-        <section id="home-cta" class="container fade-in-element">
-            <h2>Let's Build Something Together</h2>
-            <p>I'm ready to bring my passion and skills to your next project.</p>
-            <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-        </section>
-
-    </main>
+        <div class="cta-flex-layout">
+            <div class="cta-text-group">
+                <span class="cta-status-badge"><span class="pulse-dot"></span> Available for work</span>
+                <h2>Let's build something exceptional.</h2>
+                <p>Turning complex requirements into clean, scalable, and user-friendly digital solutions.</p>
+            </div>
+            
+            <div class="cta-btn-group">
+                <a href="contact.html" class="btn btn-accent-glow">Start a Project</a>
+                <a href="https://github.com/Jom-kowd" target="_blank" class="btn btn-glass-outline">
+                    <i class="devicon-github-original"></i> Check my Code
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer class="modern-footer">
         <div class="container">
