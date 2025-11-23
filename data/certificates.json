@@ -63,6 +63,13 @@
     "url": "certificates/Cybersecurity Awareness and National Cybersecurity Plan 2023-2028.pdf"
   },
   {
+    "title": "Computer System Servicing NC II",
+    "issuer": "TESDA",
+    "date": "Sep 21, 2025",
+    "category": "Hardware",
+    "url": "#"
+  },
+  {
     "title": "JavaScript Essentials 2",
     "issuer": "Cisco Networking Academy",
     "date": "Apr 07, 2025",
@@ -91,19 +98,10 @@
     "url": "certificates/Setting Up Computer Servers.pdf"
   },
   {
-    "title": "Computer System Servicing NC II",
-    "issuer": "TESDA",
-    "date": "Sep 21, 2025",
-    "category": "Hardware",
-    "url": "#" 
-  },
-  {
     "title": "Computer Literacy Program",
-    "issuer": "Ralmex Opportunity Skill Development Services / C.A.B Industrial Technological Institute",
+    "issuer": "Ralmex Opportunity Skill Development Services",
     "date": "Nov 11, 2018",
     "category": "General",
-    "url": "#" 
+    "url": "#"
   }
-  
 ]
-
