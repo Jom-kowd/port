@@ -24,12 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Make sure the TypeIt library is loaded
         if (typeof TypeIt !== 'undefined') {
             
-            new TypeIt("#hero-headline", {
-                strings: [
-                    "Hi, I'm Mark Jomar S. Calmateo.",
-                    "I'm a Front-End Developer.",     // Changed from Aspiring Full Stack
-                    "I'm a Graphic Designer.",        // Added from Resume 
-                    "I build digital solutions from the Philippines 🇵🇭."
+                new TypeIt("#hero-headline", {
+                    strings: [
+                        "Hi, I'm Mark Jomar S. Calmateo.",
+                        "I'm a Front-End Developer.", 
+                        "I'm a Graphic Designer.",
+                        "I build responsive websites.",
+                        "I create brand identities."
                 ],
                 // ... rest of your settings
                 speed: 60,         // How fast it types
@@ -47,20 +48,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// --- Back to Top Button Logic ---
-    const backToTopBtn = document.getElementById('back-to-top');
-
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
