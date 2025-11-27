@@ -1,59 +1,61 @@
-// This script runs after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     
-    const themeToggle = document.getElementById('theme-toggle');
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = themeBtn ? themeBtn.querySelector('i') : null;
     const storageKey = 'theme-preference';
 
-    // This function applies the theme by adding/removing the 'dark-mode' class
-    const applyTheme = (theme) => {
-        document.body.classList.toggle('dark-mode', theme === 'dark');
-        // Also update the toggle's checked state
-        if (themeToggle) {
-            themeToggle.checked = (theme === 'dark');
+    // --- Helper: Update the Icon (Moon <-> Sun) ---
+    const updateIcon = (isDark) => {
+        if (!themeIcon) return;
+        
+        if (isDark) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
         }
     };
 
-    // This function gets the preference from localStorage
-    const getThemePreference = () => {
-        return localStorage.getItem(storageKey);
+    // --- Helper: Apply the theme ---
+    const applyTheme = (theme) => {
+        const isDark = (theme === 'dark');
+        
+        // 1. Toggle Body Class
+        document.body.classList.toggle('dark-mode', isDark);
+        
+        // 2. Update Icon
+        updateIcon(isDark);
     };
 
-    // This function saves the preference to localStorage
-    const setThemePreference = (theme) => {
-        localStorage.setItem(storageKey, theme);
-    };
-
-    // This function determines the theme to apply on load
+    // --- 1. Load Preference on Start ---
     const initializeTheme = () => {
-        const savedTheme = getThemePreference();
-        // We get the OS preference *only* if no theme is saved
-        const osTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const savedTheme = localStorage.getItem(storageKey);
         
-        // Priority: 1. Saved in localStorage, 2. OS preference
-        const themeToApply = savedTheme || osTheme;
+        // Check saved OR system preference
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         
-        applyTheme(themeToApply);
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            applyTheme('dark');
+        } else {
+            applyTheme('light');
+        }
     };
 
-    // Run the initialization on first load
     initializeTheme();
 
-    // Add event listener for the toggle switch
-    if (themeToggle) {
-        themeToggle.addEventListener('change', () => {
-            const newTheme = themeToggle.checked ? 'dark' : 'light';
-            setThemePreference(newTheme);
+    // --- 2. Handle Click Event ---
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            // Check if we are currently in dark mode
+            const isDark = document.body.classList.contains('dark-mode');
+            
+            // Toggle to the opposite
+            const newTheme = isDark ? 'light' : 'dark';
+            
+            // Apply and Save
             applyTheme(newTheme);
+            localStorage.setItem(storageKey, newTheme);
         });
     }
-
-    // Optional: Listen for changes in OS preference
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        // Only change if the user hasn't set a preference
-        if (!getThemePreference()) {
-            const newTheme = e.matches ? 'dark' : 'light';
-            applyTheme(newTheme);
-        }
-    });
-
 });
