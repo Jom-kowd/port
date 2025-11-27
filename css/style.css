@@ -3049,3 +3049,74 @@ body.dark-mode .cta-modern-card p {
     transform: rotate(15deg);
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+/* --- NEW: Services Section Styles --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-list {
+    list-style: none;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.service-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-list li i {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+}
+
+/* --- NEW: Design Showcase Styles --- */
+.design-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.design-thumb {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    background: var(--card-bg);
+}
+
+.design-thumb:hover {
+    transform: scale(1.05) rotate(2deg);
+    z-index: 2;
+    box-shadow: var(--shadow);
+}
