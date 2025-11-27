@@ -7,7 +7,7 @@
     "long_desc": "A comprehensive web-based system designed to manage barangay records, including population, voters, blotter records, and certificate issuance.",
     "tags": ["Development", "Web System", "Dashboard"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-pasalubong",
@@ -17,7 +17,7 @@
     "long_desc": "A vibrant e-commerce interface designed for a local pasalubong shop, featuring a clean layout for showcasing products.",
     "tags": ["Development", "E-Commerce", "UI/UX"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-mj-moto",
@@ -27,7 +27,7 @@
     "long_desc": "A sleek, dark-themed website design for a motorcycle parts and accessories shop, emphasizing high-quality visuals.",
     "tags": ["Development", "Web Design", "Dark Mode"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-tech-find",
@@ -37,7 +37,7 @@
     "long_desc": "A desktop application game developed using VB.NET where players find technology-related words within a grid.",
     "tags": ["Development", "VB.NET", "Game Dev"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-memory-savior",
@@ -47,7 +47,7 @@
     "long_desc": "A game application built with VB.NET featuring user profiles, leaderboards, and varying difficulty levels.",
     "tags": ["Development", "VB.NET", "Game Dev"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-find-collect",
@@ -57,7 +57,7 @@
     "long_desc": "An interactive desktop game where players must locate specific items within various scenes. Built using VB.NET.",
     "tags": ["Development", "VB.NET", "Game Dev"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-memory-match",
@@ -67,7 +67,7 @@
     "long_desc": "A web-based implementation of the classic memory matching game, testing user recall and concentration.",
     "tags": ["Development", "JavaScript", "Game"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-shuffle-text",
@@ -77,7 +77,7 @@
     "long_desc": "A simple yet addictive word game where users must unscramble jumbled letters to form the correct word.",
     "tags": ["Development", "JavaScript", "Game"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-tiktaktoe",
@@ -87,7 +87,7 @@
     "long_desc": "A clean, dark-themed web version of Tic Tac Toe with restart functionality and game state management.",
     "tags": ["Development", "JavaScript", "Game"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-calculator",
@@ -97,7 +97,7 @@
     "long_desc": "A fully functional calculator with a modern dark UI, capable of handling basic arithmetic operations.",
     "tags": ["Development", "JavaScript", "Tool"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-portfolio-v2",
@@ -107,7 +107,7 @@
     "long_desc": "A minimalist, dark-themed personal website design focused on typography and essential information.",
     "tags": ["Development", "Portfolio", "Web Design"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "dev-asus-concept",
@@ -117,7 +117,7 @@
     "long_desc": "A responsive landing page design concept inspired by ASUS, focusing on clean product presentation.",
     "tags": ["Development", "Frontend", "Concept"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-aclc-jersey",
@@ -127,7 +127,7 @@
     "long_desc": "Full sublimation basketball jersey design featuring the ACLC Hawks branding with a modern geometric pattern.",
     "tags": ["Graphic Design", "Jersey", "Apparel"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-jaguar-riders",
@@ -137,7 +137,7 @@
     "long_desc": "Aggressive and detailed layout design for Jaguar Motorcycle Riders Club featuring custom illustration.",
     "tags": ["Graphic Design", "Jersey", "Apparel"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-skr-riders",
@@ -147,7 +147,7 @@
     "long_desc": "Dynamic jersey design for SKR Riders incorporating racing elements and bold typography.",
     "tags": ["Graphic Design", "Jersey", "Apparel"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-genggeng",
@@ -157,7 +157,7 @@
     "long_desc": "Rider jersey design mixing camouflage patterns with clean vector badges for Geng Geng Moto Club.",
     "tags": ["Graphic Design", "Jersey", "Apparel"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-sepak-takraw",
@@ -167,7 +167,7 @@
     "long_desc": "Jersey design for the Sepak Takraw League utilizing abstract fluid wave patterns in blue and white.",
     "tags": ["Graphic Design", "Jersey", "Sports"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-cabusay-sk",
@@ -177,7 +177,7 @@
     "long_desc": "Formal yet modern polo shirt layout for the Sangguniang Kabataan of Brgy. Cabusay.",
     "tags": ["Graphic Design", "Apparel", "Uniform"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-tabagwang-shirt",
@@ -187,7 +187,7 @@
     "long_desc": "Colorful and artistic t-shirt design for the Tabagwang Festival featuring local landmarks and cultural symbols.",
     "tags": ["Graphic Design", "T-Shirt", "Festival"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-reunion-tree",
@@ -197,7 +197,7 @@
     "long_desc": "Large scale tarpaulin design for the 10th Calmateo Family Reunion featuring a symbolic family tree.",
     "tags": ["Graphic Design", "Tarpaulin", "Events"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-tbrc-logo",
@@ -207,7 +207,7 @@
     "long_desc": "Official logo design for TBRC symbolizing unity and brotherhood among riders.",
     "tags": ["Graphic Design", "Logo", "Branding"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-poster-infidelity",
@@ -217,7 +217,7 @@
     "long_desc": "Mood-setting movie poster design for the short film 'Infidelity', highlighting the lead cast.",
     "tags": ["Graphic Design", "Poster", "Print"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-menu-tarp",
@@ -227,7 +227,7 @@
     "long_desc": "High-visibility menu design for a frozen foods business, designed to catch attention.",
     "tags": ["Graphic Design", "Tarpaulin", "Advertising"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   },
   {
     "id": "des-election-poster",
@@ -237,6 +237,6 @@
     "long_desc": "Template design for election campaign posters featuring bold typography and patriotic colors.",
     "tags": ["Graphic Design", "Poster", "Campaign"],
     "live_url": "#",
-    "code_url": "#"
+    "code_url": "https://github.com/Jom-kowd"
   }
 ]
