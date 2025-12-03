@@ -41,8 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
             imageEl.alt = project.title;
             longDescEl.textContent = project.long_desc;
             
-            liveLinkEl.href = project.live_url;
-            codeLinkEl.href = project.code_url;
+            // Check if links exist before setting href
+            if(project.live_url && project.live_url !== "#") {
+                liveLinkEl.href = project.live_url;
+                liveLinkEl.style.display = 'inline-flex';
+            } else {
+                liveLinkEl.style.display = 'none'; // Hide if no link
+            }
+
+            if(project.code_url && project.code_url !== "#") {
+                codeLinkEl.href = project.code_url;
+                codeLinkEl.style.display = 'inline-flex';
+            } else {
+                codeLinkEl.style.display = 'none'; // Hide if no link
+            }
 
             // Tags (Pills)
             tagsEl.innerHTML = project.tags.map(tag => `<span class="tag-pill">${tag}</span>`).join('');
@@ -52,9 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 gallerySection.style.display = 'block';
                 galleryGrid.innerHTML = project.gallery.map(imgSrc => `
                     <div class="gallery-item">
-                        <img src="${imgSrc}" alt="Project screenshot">
+                        <img src="${imgSrc}" alt="Project screenshot" class="gallery-img-trigger">
                     </div>
                 `).join('');
+                
+                // Initialize Lightbox after images are added
+                initLightbox(); 
             } else {
                 gallerySection.style.display = 'none';
             }
@@ -65,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Re-run Scroll Reveal if available
             if (typeof initializeScrollReveal === 'function') {
-                // Small delay to ensure DOM is rendered
                 setTimeout(initializeScrollReveal, 100);
             }
 
@@ -96,6 +110,36 @@ document.addEventListener('DOMContentLoaded', () => {
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
         })();
+    }
+
+    // --- Lightbox Logic ---
+    function initLightbox() {
+        const modal = document.getElementById('lightbox-modal');
+        const modalImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+        const triggers = document.querySelectorAll('.gallery-img-trigger');
+
+        if (!modal) return; // Guard clause if modal html isn't added yet
+
+        triggers.forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function() {
+                modal.style.display = "flex";
+                modal.style.alignItems = "center";
+                modal.style.justifyContent = "center";
+                modalImg.src = this.src;
+            });
+        });
+
+        // Close actions
+        if(closeBtn) {
+            closeBtn.onclick = function() { modal.style.display = "none"; }
+        }
+        
+        // Close on background click
+        modal.onclick = function(e) {
+            if(e.target === modal) { modal.style.display = "none"; }
+        }
     }
 
     loadProjectDetails();

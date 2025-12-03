@@ -30,6 +30,7 @@ async function loadPortfolioProjects(projectGrid) {
             projectGrid.innerHTML += cardHTML;
         });
 
+        // Re-initialize external libraries if they exist
         if (typeof initializeProjectFilter === 'function') initializeProjectFilter();
         if (typeof initializeScrollReveal === 'function') initializeScrollReveal();
 
@@ -80,7 +81,7 @@ function createProjectCard(project) {
     return `
         <div class="project-card fade-in-element" data-tags="${tagsString}">
             <div class="project-thumb">
-                <img src="${project.image}" alt="${project.title}">
+                <img src="${project.image}" alt="${project.title}" loading="lazy" width="400" height="225">
                 <div class="project-overlay">
                     <a href="project-detail.html?id=${project.id}" class="view-project-btn">
                         View Project <i class="fa-solid fa-arrow-right"></i>

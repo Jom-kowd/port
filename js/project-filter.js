@@ -11,45 +11,53 @@ document.addEventListener('DOMContentLoaded', () => {
 function initializeProjectFilter() {
     const filterContainer = document.querySelector('.filter-bar');
     const projectGrid = document.querySelector('.project-grid');
+    const searchInput = document.getElementById('project-search'); // Get the input
 
-    // Make sure both exist before running
     if (filterContainer && projectGrid) {
-        
-        // We must query for the cards *inside* this function
-        // so we get the newly loaded ones from the JSON fetch.
         const projectCards = projectGrid.querySelectorAll('.project-card');
+        
+        // Track current filter state
+        let activeCategory = 'all';
+        let searchTerm = '';
 
-        filterContainer.addEventListener('click', (e) => {
-            // Only run if a filter button was clicked
-            if (!e.target.classList.contains('filter-btn')) {
-                return;
-            }
-
-            // 1. Remove 'active' class from all buttons
-            filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // 2. Add 'active' class to the clicked button
-            const filterButton = e.target;
-            filterButton.classList.add('active');
-
-            // 3. Get the filter value from the button's data attribute
-            const filterValue = filterButton.dataset.filter;
-
-            // 4. Loop through all project cards and toggle visibility
+        const filterProjects = () => {
             projectCards.forEach(card => {
-                // Get the tags string from the HTML attribute (e.g., "react node.js")
-                const cardTags = card.dataset.tags;
+                const cardTags = card.dataset.tags ? card.dataset.tags.toLowerCase() : '';
+                const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+                const cardDesc = card.querySelector('p').textContent.toLowerCase();
+                
+                // Category Match
+                const matchesCategory = activeCategory === 'all' || cardTags.includes(activeCategory.toLowerCase());
+                
+                // Search Match (Title, Desc, or Tags)
+                const matchesSearch = cardTitle.includes(searchTerm) || 
+                                      cardDesc.includes(searchTerm) || 
+                                      cardTags.includes(searchTerm);
 
-                // Check if 'all' is selected OR if the card's tags contain the filter value.
-                // We use .toLowerCase() on both sides to ensure "Graphic Design" matches "graphic design".
-                if (filterValue === 'all' || (cardTags && cardTags.toLowerCase().includes(filterValue.toLowerCase()))) {
-                    card.classList.remove('hide'); // Show the card
+                if (matchesCategory && matchesSearch) {
+                    card.classList.remove('hide');
                 } else {
-                    card.classList.add('hide'); // Hide the card
+                    card.classList.add('hide');
                 }
             });
+        };
+
+        // Button Click Event
+        filterContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                filterContainer.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                activeCategory = e.target.dataset.filter;
+                filterProjects();
+            }
         });
+
+        // Input Type Event
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                searchTerm = e.target.value.toLowerCase();
+                filterProjects();
+            });
+        }
     }
 }
