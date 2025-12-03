@@ -1,50 +1,58 @@
 // Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Mobile Nav Hamburger ---
+    // --- 1. Mobile Nav Hamburger ---
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    // Check if both elements exist
     if (hamburger && navLinks) {
-        // Add click event listener to the hamburger icon
         hamburger.addEventListener('click', () => {
-            // Toggle the 'nav-active' class to show/hide the menu
             navLinks.classList.toggle('nav-active');
-            
-            // Toggle the 'toggle' class for the hamburger animation
             hamburger.classList.toggle('toggle');
         });
     }
 
-    // --- Hero Section Typing Animation ---
-    // Check if the element with id 'hero-headline' exists
+    // --- 2. Hero Section Typing Animation ---
     if (document.getElementById('hero-headline')) {
-        
-        // Make sure the TypeIt library is loaded
         if (typeof TypeIt !== 'undefined') {
-            
-                new TypeIt("#hero-headline", {
-                    strings: [
-                        "Hi, I'm Mark Jomar S. Calmateo.",
-                        "I'm a Front-End Developer.", 
-                        "I'm a Graphic Designer.",
-                        "I build responsive websites.",
-                        "I create brand identities."
+            new TypeIt("#hero-headline", {
+                strings: [
+                    "Hi, I'm Mark Jomar.",
+                    "Front-End Developer.", 
+                    "Graphic Designer."
                 ],
-                // ... rest of your settings
-                speed: 60,         // How fast it types
-                breakLines: false, // Don't add <br> tags
-                waitUntilVisible: true, // Wait until the element is on screen
-                loop: true,        // Loop forever
-                deleteSpeed: 40,   // How fast it deletes
-                lifeLike: true     // More "human" typing
-            }).go(); // Start the animation
-
+                speed: 60,
+                breakLines: false,
+                waitUntilVisible: true,
+                loop: true,
+                deleteSpeed: 40,
+                lifeLike: true
+            }).go();
         } else {
             console.error("TypeIt.js library is not loaded.");
         }
     }
 
-});
+    // --- 3. Scroll To Top Logic (NEW) ---
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
 
+    if (scrollTopBtn) {
+        // Show button when scrolling down 500px
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll to top on click
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+});

@@ -2,6 +2,7 @@
   {
     "id": "dev-bims",
     "title": "BIMS Web System",
+    "featured": true,
     "image": "projects/DEVELOPMENT/BIMSwebsystem.png",
     "short_desc": "Barangay Information Management System.",
     "long_desc": "A comprehensive web-based system designed to manage barangay records, including population, voters, blotter records, and certificate issuance.",
@@ -12,6 +13,7 @@
   {
     "id": "dev-pasalubong",
     "title": "Nicole's Pasalubong Shop",
+    "featured": true,
     "image": "projects/DEVELOPMENT/pasalubongshop.png",
     "short_desc": "E-commerce landing page for local delicacies.",
     "long_desc": "A vibrant e-commerce interface designed for a local pasalubong shop, featuring a clean layout for showcasing products.",
@@ -22,6 +24,7 @@
   {
     "id": "dev-mj-moto",
     "title": "MJ's Moto Shop",
+    "featured": true,
     "image": "projects/DEVELOPMENT/mjmotoshop.png",
     "short_desc": "Automotive parts and accessories shop interface.",
     "long_desc": "A sleek, dark-themed website design for a motorcycle parts and accessories shop, emphasizing high-quality visuals.",

@@ -1,0 +1,52 @@
+[
+  {
+    "category": "Frontend & UI",
+    "icon": "devicon-html5-plain",
+    "items": [
+      { "name": "React", "icon": "devicon-react-original colored" },
+      { "name": "Vue.js", "icon": "devicon-vuejs-plain colored" },
+      { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
+      { "name": "Tailwind", "icon": "devicon-tailwindcss-plain colored" },
+      { "name": "CSS3", "icon": "devicon-css3-plain colored" },
+      { "name": "HTML5", "icon": "devicon-html5-plain colored" }
+    ]
+  },
+  {
+    "category": "Backend & API",
+    "icon": "devicon-nodejs-plain",
+    "items": [
+      { "name": "Node.js", "icon": "devicon-nodejs-plain colored" },
+      { "name": "Express", "icon": "devicon-express-original" },
+      { "name": "Python", "icon": "devicon-python-plain colored" },
+      { "name": "PHP", "icon": "devicon-php-plain colored" }
+    ]
+  },
+  {
+    "category": "Database",
+    "icon": "devicon-postgresql-plain",
+    "items": [
+      { "name": "MongoDB", "icon": "devicon-mongodb-plain colored" },
+      { "name": "PostgreSQL", "icon": "devicon-postgresql-plain colored" },
+      { "name": "MySQL", "icon": "devicon-mysql-plain colored" }
+    ]
+  },
+  {
+    "category": "DevOps & Tools",
+    "icon": "devicon-git-plain",
+    "items": [
+      { "name": "Git", "icon": "devicon-git-plain colored" },
+      { "name": "Docker", "icon": "devicon-docker-plain colored" },
+      { "name": "AWS", "icon": "devicon-amazonwebservices-original colored" },
+      { "name": "Vercel", "icon": "devicon-vercel-original" }
+    ]
+  },
+  {
+    "category": "Creative Design",
+    "icon": "devicon-photoshop-plain",
+    "items": [
+      { "name": "Photoshop", "icon": "devicon-photoshop-plain colored" },
+      { "name": "Illustrator", "icon": "devicon-illustrator-plain colored" },
+      { "name": "Figma", "icon": "devicon-figma-plain colored" }
+    ]
+  }
+]

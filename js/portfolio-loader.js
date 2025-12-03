@@ -48,11 +48,15 @@ async function loadFeaturedProjects(projectGrid) {
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         let projects = await response.json();
 
-        const featuredProjects = projects.slice(0, 3); // Get only first 3
+        // FILTER BY FEATURED FLAG instead of slice
+        const featuredProjects = projects.filter(p => p.featured === true);
+
+        // Fallback: If no projects are marked featured, take the first 3
+        const finalProjects = featuredProjects.length > 0 ? featuredProjects : projects.slice(0, 3);
 
         projectGrid.innerHTML = ''; 
 
-        featuredProjects.forEach(project => {
+        finalProjects.forEach(project => {
             const cardHTML = createProjectCard(project);
             projectGrid.innerHTML += cardHTML;
         });
@@ -61,7 +65,7 @@ async function loadFeaturedProjects(projectGrid) {
 
     } catch (error) {
         console.error('Error loading featured projects:', error.message);
-        projectGrid.innerHTML = '<p style="text-align: center; color: var(--secondary-color); grid-column: 1 / -1;">Could not load featured projects.</p>';
+        projectGrid.innerHTML = '<p style="text-align: center;">Could not load featured projects.</p>';
     }
 }
 
