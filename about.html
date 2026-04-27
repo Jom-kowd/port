@@ -19,6 +19,120 @@
       gtag('js', new Date());
       gtag('config', 'G-5TLNBD30VM');
     </script>
+
+    <style>
+        .about-layout-new {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        /* Top Hero Profile Card */
+        .profile-hero-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            padding-bottom: 2.5rem;
+        }
+
+        .profile-hero-bg {
+            height: 180px;
+            background: var(--primary-gradient);
+            opacity: 0.85;
+        }
+
+        /* CENTERED PROFILE PICTURE */
+        .profile-hero-avatar {
+            margin-top: -90px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center; /* Ensures perfect centering */
+            align-items: center;
+        }
+
+        .profile-hero-avatar img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid var(--card-bg);
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-hero-info {
+            padding: 0 2rem;
+            margin-top: 1rem;
+        }
+
+        .profile-hero-info h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-text);
+        }
+
+        body.dark-mode .profile-hero-info h3 {
+            color: var(--light-text);
+        }
+
+        .quick-stats-flex {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem auto;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            max-width: 600px;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-actions .social-mini-links {
+            margin-top: 0;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .hero-actions .social-mini-links i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+
+        .hero-actions .social-mini-links i:hover {
+            color: var(--primary-color);
+        }
+
+        /* Bottom Split Layout */
+        .about-content-split {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr; /* Bio is slightly narrower than Timeline */
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 900px) {
+            .about-content-split {
+                grid-template-columns: 1fr;
+            }
+            .quick-stats-flex {
+                gap: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -59,22 +173,21 @@
                 <p class="sub-headline">I'm Mark Jomar, a multi-disciplinary creative specializing in web development and graphic design, seamlessly integrating visual artistry with functional digital solutions.</p>
             </div>
 
-            <div class="about-grid">
+            <div class="about-layout-new">
                 
-                <aside class="about-sidebar">
-                    <div class="profile-card-modern">
-                        <div class="image-frame">
-                            <img src="images/profile2.png" alt="Mark Jomar Calmateo" class="profile-img">
-                            <div class="frame-accent"></div>
+                <div class="profile-hero-card">
+                    <div class="profile-hero-bg"></div>
+                    <div class="profile-hero-avatar">
+                        <img src="images/profile2.png" alt="Mark Jomar Calmateo">
+                    </div>
+                    <div class="profile-hero-info">
+                        <h3>Mark Jomar S. Calmateo</h3>
+                        <div class="badges">
+                            <span class="role-badge">Full Stack Developer</span>
+                            <span class="role-badge-secondary">Graphic Designer</span>
                         </div>
                         
-                        <div class="sidebar-info">
-                            <h3>Mark Jomar S. Calmateo</h3>
-                            <p class="role-badge">Full Stack Developer</p>
-                            <p class="role-badge-secondary">Graphic Designer</p>
-                        </div>
-
-                        <div class="quick-stats-grid">
+                        <div class="quick-stats-flex">
                             <div class="stat-box">
                                 <span class="stat-number">2+</span>
                                 <span class="stat-label">Years Exp.</span>
@@ -89,8 +202,8 @@
                             </div>
                         </div>
 
-                        <div class="sidebar-actions">
-                            <a href="https://drive.google.com/file/d/1YJrWtE_TsRqsnKuKT1B6wDKXqhzEpSFY/view?usp=drive_link" download class="btn btn-primary full-width-btn">
+                        <div class="hero-actions">
+                            <a href="https://drive.google.com/file/d/1YJrWtE_TsRqsnKuKT1B6wDKXqhzEpSFY/view?usp=drive_link" download class="btn btn-primary">
                                 <i class="devicon-chrome-plain" style="margin-right:8px; font-size:1rem;"></i> Download Resume
                             </a>
                             <div class="social-mini-links">
@@ -99,90 +212,93 @@
                             </div>
                         </div>
                     </div>
-                </aside>
+                </div>
 
-                <div class="about-content">
+                <div class="about-content-split">
                     
-                    <div class="content-block bio-card">
-                        <i class="fa-solid fa-pen-nib bio-bg-icon"></i> <h2 class="text-gradient">Who I Am</h2>
-                        
-                        <p class="lead-text">
-                            I am a detail-oriented creative professional with a unique ability to blend 
-                            <span class="highlight">Visual Design</span> with <span class="highlight">Full Stack Web Development</span>.
-                        </p>
-                        <p>
-                            My focus is on building functional, user-friendly digital products. Expert in modern web technologies and visual design, I am dedicated to delivering creative, high-quality solutions that improve business efficiency and growth.
-                        </p>
-                    </div>
-
-                    <div class="content-block">
-                        <h2>My Journey</h2>
-                        <div class="timeline">
-
-                            <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <span class="timeline-date">Graduated April 2026</span>
-                                    <h3>BS in Information Technology</h3>
-                                    <p>Our Lady of Lourdes College Foundation, Inc.</p>
-                                    <p style="font-size: 0.85rem; color: var(--primary-color); margin-top: 5px;">
-                                        <i class="fa-solid fa-award"></i> Latin Honor (Academic Distinction) | Dean's Lister (2025 & 2026)
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <span class="timeline-date">2026 (350 Hours)</span>
-                                    <h3>IT Intern</h3>
-                                    <p>Our Great Home Style Depot Corp.</p>
-                                    <p style="font-size: 0.9rem; margin-top: 5px;">Work as a Graphics Artist, Web Developer, and IT Support specialist.</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <span class="timeline-date">2024 - Present</span>
-                                    <h3>Freelance Full Stack Developer</h3>
-                                    <p>Managing an independent web development business. I provide end-to-end services including static landing pages, WordPress management, and dynamic web applications using the MERN stack.</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <span class="timeline-date">2023 - Present</span>
-                                    <h3>Freelance Graphic Designer</h3>
-                                    <p>Specializing in vector graphics and brand identity. I help clients visualize their ideas on real-world products, from custom apparel to digital marketing assets.</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <span class="timeline-date">September 21, 2025</span>
-                                    <h3>Computer System Servicing NC II</h3>
-                                    <p>Successfully passed the TESDA National Certificate II assessment. Demonstrated competency in installing, configuring, and maintaining computer systems and networks.</p>
-                                </div>
-                            </div>
+                    <div class="bio-section">
+                        <div class="content-block bio-card">
+                            <i class="fa-solid fa-pen-nib bio-bg-icon"></i> 
+                            <h2 class="text-gradient">Who I Am</h2>
                             
-                            <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <span class="timeline-date">November 11, 2018</span>
-                                    <h3>Computer Literacy Program</h3>
-                                    <p>Completed training at Ralmex Opportunity Skill Development Services / C.A.B Industrial Technological Institute.</p>
-                                </div>
-                            </div>
-
+                            <p class="lead-text">
+                                I am a detail-oriented creative professional with a unique ability to blend 
+                                <span class="highlight">Visual Design</span> with <span class="highlight">Full Stack Web Development</span>.
+                            </p>
+                            <p>
+                                My focus is on building functional, user-friendly digital products. Expert in modern web technologies and visual design, I am dedicated to delivering creative, high-quality solutions that improve business efficiency and growth.
+                            </p>
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </section>
+                    <div class="timeline-section">
+                        <div class="content-block">
+                            <h2>My Journey</h2>
+                            <div class="timeline">
+
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">Graduated April 2026</span>
+                                        <h3>BS in Information Technology</h3>
+                                        <p>Our Lady of Lourdes College Foundation, Inc.</p>
+                                        <p style="font-size: 0.85rem; color: var(--primary-color); margin-top: 5px;">
+                                            <i class="fa-solid fa-award"></i> Latin Honor (Academic Distinction) | Dean's Lister (2025 & 2026)
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2026 (350 Hours)</span>
+                                        <h3>IT Intern</h3>
+                                        <p>Our Great Home Style Depot Corp.</p>
+                                        <p style="font-size: 0.9rem; margin-top: 5px;">Work as a Graphics Artist, Web Developer, and IT Support specialist.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2024 - Present</span>
+                                        <h3>Freelance Full Stack Developer</h3>
+                                        <p>Managing an independent web development business. I provide end-to-end services including static landing pages, WordPress management, and dynamic web applications using the MERN stack.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2023 - Present</span>
+                                        <h3>Freelance Graphic Designer</h3>
+                                        <p>Specializing in vector graphics and brand identity. I help clients visualize their ideas on real-world products, from custom apparel to digital marketing assets.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">September 21, 2025</span>
+                                        <h3>Computer System Servicing NC II</h3>
+                                        <p>Successfully passed the TESDA National Certificate II assessment. Demonstrated competency in installing, configuring, and maintaining computer systems and networks.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">November 11, 2018</span>
+                                        <h3>Computer Literacy Program</h3>
+                                        <p>Completed training at Ralmex Opportunity Skill Development Services / C.A.B Industrial Technological Institute.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div> </div> </section>
     </main>
 
     <footer class="modern-footer">
