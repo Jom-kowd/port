@@ -15,24 +15,47 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
+ * Creates the HTML for a single Skeleton Card
+ */
+function createSkeletonHTML() {
+    return `
+        <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-content">
+                <div class="skeleton-title"></div>
+                <div class="skeleton-text"></div>
+                <div class="skeleton-text"></div>
+                <div class="skeleton-text short"></div>
+            </div>
+        </div>
+    `;
+}
+
+/**
  * Fetches ALL projects and builds the HTML for the main portfolio grid.
  */
 async function loadPortfolioProjects(projectGrid) {
     try {
+        // Show 6 skeleton cards while loading
+        projectGrid.innerHTML = createSkeletonHTML().repeat(6);
+
         const response = await fetch('data/projects.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const projects = await response.json();
 
-        projectGrid.innerHTML = ''; // Clear loading message
+        // Optional: Artificial delay para makita mo ang skeleton effect kahit mabilis ang internet mo
+        // Pwede mo itong tanggalin (setTimeout) kapag idedeploy na.
+        setTimeout(() => {
+            projectGrid.innerHTML = ''; // Clear skeletons
+            projects.forEach(project => {
+                const cardHTML = createProjectCard(project);
+                projectGrid.innerHTML += cardHTML;
+            });
 
-        projects.forEach(project => {
-            const cardHTML = createProjectCard(project);
-            projectGrid.innerHTML += cardHTML;
-        });
-
-        // Re-initialize external libraries if they exist
-        if (typeof initializeProjectFilter === 'function') initializeProjectFilter();
-        if (typeof initializeScrollReveal === 'function') initializeScrollReveal();
+            // Re-initialize external libraries if they exist
+            if (typeof initializeProjectFilter === 'function') initializeProjectFilter();
+            if (typeof initializeScrollReveal === 'function') initializeScrollReveal();
+        }, 500); // 500ms delay
 
     } catch (error) {
         console.error('Error loading projects:', error.message);
@@ -45,24 +68,26 @@ async function loadPortfolioProjects(projectGrid) {
  */
 async function loadFeaturedProjects(projectGrid) {
     try {
+        // Show 3 skeleton cards while loading
+        projectGrid.innerHTML = createSkeletonHTML().repeat(3);
+
         const response = await fetch('data/projects.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         let projects = await response.json();
 
         // FILTER BY FEATURED FLAG instead of slice
         const featuredProjects = projects.filter(p => p.featured === true);
-
-        // Fallback: If no projects are marked featured, take the first 3
         const finalProjects = featuredProjects.length > 0 ? featuredProjects : projects.slice(0, 3);
 
-        projectGrid.innerHTML = ''; 
+        setTimeout(() => {
+            projectGrid.innerHTML = ''; // Clear skeletons
+            finalProjects.forEach(project => {
+                const cardHTML = createProjectCard(project);
+                projectGrid.innerHTML += cardHTML;
+            });
 
-        finalProjects.forEach(project => {
-            const cardHTML = createProjectCard(project);
-            projectGrid.innerHTML += cardHTML;
-        });
-
-        if (typeof initializeScrollReveal === 'function') initializeScrollReveal();
+            if (typeof initializeScrollReveal === 'function') initializeScrollReveal();
+        }, 500);
 
     } catch (error) {
         console.error('Error loading featured projects:', error.message);
