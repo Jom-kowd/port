@@ -452,3 +452,24 @@ body.dark-mode .theme-btn:hover {
     color: var(--dark-bg); /* Dark icon on bright button */
     box-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
 }
+
+/* Dark Mode Glassmorphism */
+body.dark-mode .project-card, 
+body.dark-mode .skill-item, 
+body.dark-mode .tech-card, 
+body.dark-mode .cert-card, 
+body.dark-mode .sidebar-card, 
+body.dark-mode .bio-card, 
+body.dark-mode .soft-skill-card,
+body.dark-mode .contact-form-container,
+body.dark-mode .comments-wrapper {
+    background-color: rgba(17, 34, 64, 0.6) !important; /* Semi-transparent Navy */
+    border: 1px solid rgba(100, 255, 218, 0.1) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+body.dark-mode .project-card:hover {
+    background-color: rgba(100, 255, 218, 0.05) !important; /* Mint Tint */
+    border-color: var(--primary-color) !important;
+}
