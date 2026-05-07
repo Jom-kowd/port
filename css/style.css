@@ -3268,3 +3268,204 @@ body.dark-mode .skeleton-text {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
+
+/* =========================================
+   NEW MODERN PORTFOLIO LAYOUT
+   ========================================= */
+
+/* Modern Filter Bar */
+.modern-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: var(--card-bg);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    max-width: 950px;
+    margin: 0 auto 4rem auto;
+}
+
+.modern-filter-bar .filter-btn {
+    border: none;
+    background: transparent;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.modern-filter-bar .filter-btn.active {
+    background: var(--primary-gradient);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.modern-search-wrapper {
+    margin-left: auto;
+    position: relative;
+}
+
+.modern-search-wrapper input {
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    border-radius: 30px;
+    color: var(--dark-text);
+    outline: none;
+    width: 220px;
+    font-family: var(--font-main);
+    transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+.modern-search-wrapper input:focus {
+    width: 260px;
+    border-color: var(--primary-color);
+}
+
+.modern-search-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+}
+
+@media(max-width: 768px) {
+    .modern-filter-bar {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 1.5rem;
+    }
+    .modern-search-wrapper {
+        margin-left: 0;
+        width: 100%;
+    }
+    .modern-search-wrapper input {
+        width: 100%;
+    }
+    .modern-search-wrapper input:focus {
+        width: 100%;
+    }
+}
+
+/* Modern Project Grid & Cards */
+.modern-project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.modern-project-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    box-shadow: var(--shadow);
+    display: block; 
+    border: none;
+    background: var(--card-bg);
+}
+
+.modern-project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.modern-project-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Gradient Overlay */
+.modern-project-overlay {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.modern-project-card:hover .modern-project-overlay {
+    opacity: 1;
+}
+
+/* Overlay Text Animations */
+.modern-project-overlay h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.modern-project-overlay p {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+}
+
+.modern-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.2s;
+}
+
+.modern-project-card:hover .modern-project-overlay h3,
+.modern-project-card:hover .modern-project-overlay p,
+.modern-project-card:hover .modern-tags {
+    transform: translateY(0);
+}
+
+.modern-tag-pill {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* View Icon */
+.view-icon-circle {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 45px; height: 45px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.modern-project-card:hover .view-icon-circle {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Empty State Container */
+.empty-portfolio-state {
+    grid-column: 1 / -1; 
+    text-align: center; 
+    padding: 5rem 2rem; 
+    background: var(--card-bg); 
+    border-radius: 20px; 
+    border: 2px dashed var(--border-color);
+}

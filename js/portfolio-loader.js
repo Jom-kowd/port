@@ -1,6 +1,4 @@
-// This script runs when the DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    
     // --- Portfolio Page ---
     const portfolioGrid = document.querySelector('.project-grid.full-portfolio-grid');
     if (portfolioGrid) {
@@ -15,47 +13,55 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Creates the HTML for a single Skeleton Card
+ * Creates the HTML for a single Skeleton Card (Updated for new Aspect Ratio)
  */
 function createSkeletonHTML() {
     return `
-        <div class="skeleton-card">
-            <div class="skeleton-img"></div>
-            <div class="skeleton-content">
-                <div class="skeleton-title"></div>
-                <div class="skeleton-text"></div>
-                <div class="skeleton-text"></div>
-                <div class="skeleton-text short"></div>
-            </div>
+        <div class="skeleton-card" style="aspect-ratio: 4/3; border-radius: 20px; min-height: auto;">
+            <div class="skeleton-img" style="height: 100%;"></div>
         </div>
     `;
 }
 
 /**
- * Fetches ALL projects and builds the HTML for the main portfolio grid.
+ * Handles generating the Empty State if no projects are found
  */
+function getEmptyStateHTML() {
+    return `
+        <div class="empty-portfolio-state fade-in-element">
+            <i class="fa-solid fa-laptop-code" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1.5rem; opacity: 0.8;"></i>
+            <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">System Updating...</h3>
+            <p style="color: var(--secondary-color); font-size: 1.1rem; max-width: 500px; margin: 0 auto;">
+                I am currently re-compiling my portfolio with new, exciting projects and designs. Check back shortly to see my latest work!
+            </p>
+        </div>
+    `;
+}
+
 async function loadPortfolioProjects(projectGrid) {
     try {
-        // Show 6 skeleton cards while loading
         projectGrid.innerHTML = createSkeletonHTML().repeat(6);
 
         const response = await fetch('data/projects.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const projects = await response.json();
 
-        // Optional: Artificial delay para makita mo ang skeleton effect kahit mabilis ang internet mo
-        // Pwede mo itong tanggalin (setTimeout) kapag idedeploy na.
         setTimeout(() => {
-            projectGrid.innerHTML = ''; // Clear skeletons
-            projects.forEach(project => {
-                const cardHTML = createProjectCard(project);
-                projectGrid.innerHTML += cardHTML;
-            });
+            projectGrid.innerHTML = ''; 
+            
+            // Check if array is empty
+            if (projects.length === 0) {
+                projectGrid.innerHTML = getEmptyStateHTML();
+            } else {
+                projects.forEach(project => {
+                    const cardHTML = createProjectCard(project);
+                    projectGrid.innerHTML += cardHTML;
+                });
+            }
 
-            // Re-initialize external libraries if they exist
             if (typeof initializeProjectFilter === 'function') initializeProjectFilter();
             if (typeof initializeScrollReveal === 'function') initializeScrollReveal();
-        }, 500); // 500ms delay
+        }, 500); 
 
     } catch (error) {
         console.error('Error loading projects:', error.message);
@@ -63,28 +69,29 @@ async function loadPortfolioProjects(projectGrid) {
     }
 }
 
-/**
- * Fetches a LIMITED number of projects for the home page.
- */
 async function loadFeaturedProjects(projectGrid) {
     try {
-        // Show 3 skeleton cards while loading
         projectGrid.innerHTML = createSkeletonHTML().repeat(3);
 
         const response = await fetch('data/projects.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         let projects = await response.json();
 
-        // FILTER BY FEATURED FLAG instead of slice
         const featuredProjects = projects.filter(p => p.featured === true);
         const finalProjects = featuredProjects.length > 0 ? featuredProjects : projects.slice(0, 3);
 
         setTimeout(() => {
-            projectGrid.innerHTML = ''; // Clear skeletons
-            finalProjects.forEach(project => {
-                const cardHTML = createProjectCard(project);
-                projectGrid.innerHTML += cardHTML;
-            });
+            projectGrid.innerHTML = ''; 
+            
+            // Check if array is empty
+            if (finalProjects.length === 0) {
+                projectGrid.innerHTML = getEmptyStateHTML();
+            } else {
+                finalProjects.forEach(project => {
+                    const cardHTML = createProjectCard(project);
+                    projectGrid.innerHTML += cardHTML;
+                });
+            }
 
             if (typeof initializeScrollReveal === 'function') initializeScrollReveal();
         }, 500);
@@ -96,30 +103,25 @@ async function loadFeaturedProjects(projectGrid) {
 }
 
 /**
- * Creates the HTML for a single project card (New Design).
+ * Creates the HTML for a single project card (New Minimalist Overlay Design).
  */
 function createProjectCard(project) {
     const tagsString = project.tags.join(' ').toLowerCase();
-    // Create pills for tags
-    const tagsHTML = project.tags.map(tag => `<span class="tag-pill">${tag}</span>`).join('');
+    const tagsHTML = project.tags.map(tag => `<span class="modern-tag-pill">${tag}</span>`).join('');
 
+    // Notice we use an <a> tag as the root wrapper so the whole card is clickable
     return `
-        <div class="project-card fade-in-element" data-tags="${tagsString}">
-            <div class="project-thumb">
-                <img src="${project.image}" alt="${project.title}" loading="lazy" width="400" height="225">
-                <div class="project-overlay">
-                    <a href="project-detail.html?id=${project.id}" class="view-project-btn">
-                        View Project <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="project-content">
+        <a href="project-detail.html?id=${project.id}" class="modern-project-card project-card fade-in-element" data-tags="${tagsString}">
+            <img src="${project.image}" alt="${project.title}" loading="lazy">
+            <div class="view-icon-circle"><i class="fa-solid fa-arrow-right"></i></div>
+            
+            <div class="modern-project-overlay">
                 <h3>${project.title}</h3>
                 <p>${project.short_desc}</p>
-                <div class="project-tags">
+                <div class="modern-tags">
                     ${tagsHTML}
                 </div>
             </div>
-        </div>
+        </a>
     `;
 }

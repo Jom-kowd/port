@@ -56,25 +56,27 @@
     <main>
         <section id="portfolio-page" class="container fade-in-element">
             
-            <div class="portfolio-header-center">
-                <h1 class="page-title">Selected Works</h1>
-                <p class="sub-headline">A curated selection of projects that demonstrate my passion for building robust applications and crafting intuitive user experiences.</p>
+            <div class="portfolio-header-center" style="margin-bottom: 3rem;">
+                <span class="accent-label">03. My Work</span>
+                <h1 class="display-heading">Selected <span class="text-gradient">Projects</span></h1>
+                <p class="lead-text">A showcase of my creative and technical journey. Currently undergoing an update.</p>
             </div>
 
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="Development">Development</button>
-                <button class="filter-btn" data-filter="Graphic Design">Graphic Design</button>
-                <div class="search-wrapper" style="margin-left: auto; position: relative;">
-                    <input type="text" id="project-search" placeholder="Search projects..." 
-                        style="padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--dark-text);">
-                    <i class="fa-solid fa-search" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: var(--secondary-color);"></i>
+            <div class="filter-bar modern-filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="development">Development</button>
+                <button class="filter-btn" data-filter="graphic design">Graphic Design</button>
+                
+                <div class="search-wrapper modern-search-wrapper">
+                    <input type="text" id="project-search" placeholder="Search projects...">
+                    <i class="fa-solid fa-search"></i>
                 </div>
             </div>
 
-            <div class="project-grid full-portfolio-grid">
+            <div class="modern-project-grid project-grid full-portfolio-grid">
                 <h3 class="loading-text">Loading Projects...</h3>
             </div>
+            
         </section>
     </main>
 

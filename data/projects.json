@@ -35,6 +35,7 @@
   {
     "id": "dev-tech-find",
     "title": "Tech Find",
+    "featured": false,
     "image": "projects/DEVELOPMENT/TechFindVBNET.png",
     "short_desc": "Interactive word search game built in VB.NET.",
     "long_desc": "A desktop application game developed using VB.NET where players find technology-related words within a grid.",
@@ -45,6 +46,7 @@
   {
     "id": "dev-memory-savior",
     "title": "Memory Savior",
+    "featured": false,
     "image": "projects/DEVELOPMENT/MemorySaviorVBNET.png",
     "short_desc": "Desktop memory puzzle game.",
     "long_desc": "A game application built with VB.NET featuring user profiles, leaderboards, and varying difficulty levels.",
@@ -55,6 +57,7 @@
   {
     "id": "dev-find-collect",
     "title": "Find and Collect",
+    "featured": false,
     "image": "projects/DEVELOPMENT/FindAndCollectVBNET.png",
     "short_desc": "Hidden object style game.",
     "long_desc": "An interactive desktop game where players must locate specific items within various scenes. Built using VB.NET.",
@@ -65,6 +68,7 @@
   {
     "id": "dev-memory-match",
     "title": "Memory Match",
+    "featured": false,
     "image": "projects/DEVELOPMENT/MemoryMatchGame.png",
     "short_desc": "Classic card matching browser game.",
     "long_desc": "A web-based implementation of the classic memory matching game, testing user recall and concentration.",
@@ -75,6 +79,7 @@
   {
     "id": "dev-shuffle-text",
     "title": "Shuffle Text Game",
+    "featured": false,
     "image": "projects/DEVELOPMENT/ShuffleTextGame.png",
     "short_desc": "Word scramble puzzle application.",
     "long_desc": "A simple yet addictive word game where users must unscramble jumbled letters to form the correct word.",
@@ -85,6 +90,7 @@
   {
     "id": "dev-tiktaktoe",
     "title": "Tic Tac Toe",
+    "featured": false,
     "image": "projects/DEVELOPMENT/tiktaktoe.png",
     "short_desc": "Modern UI version of the classic game.",
     "long_desc": "A clean, dark-themed web version of Tic Tac Toe with restart functionality and game state management.",
@@ -95,6 +101,7 @@
   {
     "id": "dev-calculator",
     "title": "Simple Calculator",
+    "featured": false,
     "image": "projects/DEVELOPMENT/simplecalculator.png",
     "short_desc": "Functional web-based calculator.",
     "long_desc": "A fully functional calculator with a modern dark UI, capable of handling basic arithmetic operations.",
@@ -103,8 +110,20 @@
     "code_url": "https://github.com/Jom-kowd"
   },
   {
+    "id": "dev-portfolio-v1",
+    "title": "Portfolio V1",
+    "featured": false,
+    "image": "projects/DEVELOPMENT/myportfolio.png",
+    "short_desc": "The first iteration of my personal portfolio.",
+    "long_desc": "A dark-themed personal portfolio showcasing my initial web development and design skills.",
+    "tags": ["Development", "Portfolio", "Web Design"],
+    "live_url": "#",
+    "code_url": "https://github.com/Jom-kowd"
+  },
+  {
     "id": "dev-portfolio-v2",
     "title": "Portfolio V2",
+    "featured": true,
     "image": "projects/DEVELOPMENT/myportfoliov2.png",
     "short_desc": "Previous iteration of personal portfolio.",
     "long_desc": "A minimalist, dark-themed personal website design focused on typography and essential information.",
@@ -115,6 +134,7 @@
   {
     "id": "dev-asus-concept",
     "title": "ASUS Landing Page Concept",
+    "featured": false,
     "image": "projects/DEVELOPMENT/asus.png",
     "short_desc": "Frontend clone/concept for ASUS.",
     "long_desc": "A responsive landing page design concept inspired by ASUS, focusing on clean product presentation.",
@@ -123,123 +143,333 @@
     "code_url": "https://github.com/Jom-kowd"
   },
   {
-    "id": "des-aclc-jersey",
-    "title": "ACLC Hawks Jersey",
+    "id": "gd-aclc-naga",
+    "title": "ACLC Naga Hawks",
+    "featured": true,
     "image": "projects/GRAPHIC DESIGN/ACLC-Naga.jpg",
-    "short_desc": "Sports jersey design for ACLC Naga.",
+    "short_desc": "Sublimation basketball jersey design for ACLC Naga.",
     "long_desc": "Full sublimation basketball jersey design featuring the ACLC Hawks branding with a modern geometric pattern.",
-    "tags": ["Graphic Design", "Jersey", "Apparel"],
+    "tags": ["Graphic Design", "Apparel", "Sports"],
     "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
+    "code_url": "#"
   },
   {
-    "id": "des-jaguar-riders",
-    "title": "Jaguar Riders Club",
-    "image": "projects/GRAPHIC DESIGN/jaguarriderclub.jpg",
-    "short_desc": "Motorcycle club long sleeve design.",
-    "long_desc": "Aggressive and detailed layout design for Jaguar Motorcycle Riders Club featuring custom illustration.",
-    "tags": ["Graphic Design", "Jersey", "Apparel"],
-    "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
-  },
-  {
-    "id": "des-skr-riders",
-    "title": "SKR Riders",
-    "image": "projects/GRAPHIC DESIGN/SKR-RIDERS.jpg",
-    "short_desc": "Racing style long sleeve jersey.",
-    "long_desc": "Dynamic jersey design for SKR Riders incorporating racing elements and bold typography.",
-    "tags": ["Graphic Design", "Jersey", "Apparel"],
-    "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
-  },
-  {
-    "id": "des-genggeng",
-    "title": "Geng Geng Moto Club",
-    "image": "projects/GRAPHIC DESIGN/genggengmotoclub.jpg",
-    "short_desc": "Camouflage themed rider jersey.",
-    "long_desc": "Rider jersey design mixing camouflage patterns with clean vector badges for Geng Geng Moto Club.",
-    "tags": ["Graphic Design", "Jersey", "Apparel"],
-    "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
-  },
-  {
-    "id": "des-sepak-takraw",
-    "title": "Sepak Takraw League",
-    "image": "projects/GRAPHIC DESIGN/SepakTakrawLeagueShirt.jpg",
-    "short_desc": "Fluid wave design for sports league.",
-    "long_desc": "Jersey design for the Sepak Takraw League utilizing abstract fluid wave patterns in blue and white.",
-    "tags": ["Graphic Design", "Jersey", "Sports"],
-    "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
-  },
-  {
-    "id": "des-cabusay-sk",
-    "title": "Brgy. Cabusay SK",
+    "id": "gd-brgy-cabusay",
+    "title": "Brgy. Cabusay SK Polo",
+    "featured": false,
     "image": "projects/GRAPHIC DESIGN/BrgyCabusay.jpg",
-    "short_desc": "Official polo shirt design.",
+    "short_desc": "Official polo shirt layout for Sangguniang Kabataan.",
     "long_desc": "Formal yet modern polo shirt layout for the Sangguniang Kabataan of Brgy. Cabusay.",
     "tags": ["Graphic Design", "Apparel", "Uniform"],
     "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
+    "code_url": "#"
   },
   {
-    "id": "des-tabagwang-shirt",
-    "title": "Tabagwang Festival Shirt",
-    "image": "projects/GRAPHIC DESIGN/TabagwangShirt.jpg",
-    "short_desc": "Official festival merchandise.",
-    "long_desc": "Colorful and artistic t-shirt design for the Tabagwang Festival featuring local landmarks and cultural symbols.",
-    "tags": ["Graphic Design", "T-Shirt", "Festival"],
+    "id": "gd-cba-wolves",
+    "title": "CBA Fighting Wolves",
+    "featured": true,
+    "image": "projects/GRAPHIC DESIGN/CBAbasketballJersey.jpg",
+    "short_desc": "Fierce jersey design for the College of Business Administration.",
+    "long_desc": "Aggressive yellow and black jersey layout featuring the CBA Fighting Wolves mascot.",
+    "tags": ["Graphic Design", "Apparel", "Sports"],
     "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
+    "code_url": "#"
   },
   {
-    "id": "des-reunion-tree",
-    "title": "Calmateo Reunion",
+    "id": "gd-election-poster-2",
+    "title": "Kagawad Election Poster",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/ElectionPorter2.jpg",
+    "short_desc": "Political campaign poster layout template.",
+    "long_desc": "Template design for election campaign posters featuring bold typography and patriotic colors.",
+    "tags": ["Graphic Design", "Print", "Campaign"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-election-poster-1",
+    "title": "SK Kagawad Poster",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/electionPoster.jpg",
+    "short_desc": "Youth council election poster design.",
+    "long_desc": "Vibrant blue and yellow campaign poster template for Sangguniang Kabataan candidates.",
+    "tags": ["Graphic Design", "Print", "Campaign"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-gang-plano",
+    "title": "Gang Plano Logo",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/GangPlanoLogo.jpg",
+    "short_desc": "Group logo incorporating photo collages.",
+    "long_desc": "A memorable circular badge logo created for a friend group, featuring embedded memories.",
+    "tags": ["Graphic Design", "Logo", "Branding"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-mj-graphics-jersey",
+    "title": "MJ Graphics Official Jersey",
+    "featured": true,
+    "image": "projects/GRAPHIC DESIGN/MjGraphicsBassketballJersey.jpg",
+    "short_desc": "Self-branded basketball uniform design.",
+    "long_desc": "Sleek black, white, and yellow geometric jersey design representing the MJ Graphics brand.",
+    "tags": ["Graphic Design", "Apparel", "Branding"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-infidelity-poster",
+    "title": "Infidelity Film Poster",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/Poster.jpg",
+    "short_desc": "Promotional poster for a short film.",
+    "long_desc": "Mood-setting movie poster design for the short film 'Infidelity', highlighting the lead cast.",
+    "tags": ["Graphic Design", "Print", "Poster"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-calmateo-reunion-shirt",
+    "title": "Calmateo Reunion Shirt V1",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/REUNIONSHIRT.jpg",
+    "short_desc": "Commemorative family reunion t-shirt.",
+    "long_desc": "Vibrant and fun typography-based shirt design for a family gathering.",
+    "tags": ["Graphic Design", "Apparel", "Events"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-calmateo-reunion-shirt2",
+    "title": "Calmateo Reunion Shirt V2",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/reunionshirt2.jpg",
+    "short_desc": "Alternative minimalist family reunion shirt.",
+    "long_desc": "A cleaner, black-and-white family tree concept for the Calmateo family reunion.",
+    "tags": ["Graphic Design", "Apparel", "Events"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-calmateo-tarp",
+    "title": "Reunion Tarpaulin Backdrop",
+    "featured": false,
     "image": "projects/GRAPHIC DESIGN/ReunionTarpulin.jpg",
-    "short_desc": "Family reunion event backdrop.",
+    "short_desc": "Large scale event backdrop.",
     "long_desc": "Large scale tarpaulin design for the 10th Calmateo Family Reunion featuring a symbolic family tree.",
-    "tags": ["Graphic Design", "Tarpaulin", "Events"],
+    "tags": ["Graphic Design", "Print", "Events"],
     "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
+    "code_url": "#"
   },
   {
-    "id": "des-tbrc-logo",
+    "id": "gd-skr-riders",
+    "title": "SKR Riders Longsleeve",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/SKR-RIDERS.jpg",
+    "short_desc": "Racing style long sleeve jersey.",
+    "long_desc": "Dynamic jersey design for SKR Riders incorporating racing elements and bold typography.",
+    "tags": ["Graphic Design", "Apparel", "Riding"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-sk-mocong",
+    "title": "Brgy. Mocong SK Logo",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/SangguniangKabataanBrgyMocong.jpg",
+    "short_desc": "Official Youth Council Seal.",
+    "long_desc": "Clean and professional logo design for the Sangguniang Kabataan of Brgy. Mocong.",
+    "tags": ["Graphic Design", "Logo", "Branding"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-sepak-takraw-1",
+    "title": "Sepak Takraw League",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/SepakTakrawLeagueShirt.jpg",
+    "short_desc": "Fluid wave design for sports league.",
+    "long_desc": "Jersey design for the Sepak Takraw League utilizing abstract fluid wave patterns in blue and white.",
+    "tags": ["Graphic Design", "Apparel", "Sports"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-sepak-takraw-2",
+    "title": "OLLCF Sepak Takraw",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/TakrawShirt.jpg",
+    "short_desc": "Philippine flag-inspired jersey.",
+    "long_desc": "Patriotic jersey layout designed for the OLLCF Sepak Takraw team.",
+    "tags": ["Graphic Design", "Apparel", "Sports"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-sepak-takraw-3",
+    "title": "Sepak Takraw Fire Theme",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/sepaktakrawjersey.jpg",
+    "short_desc": "Aggressive fire and tribal pattern jersey.",
+    "long_desc": "Dark-themed sports jersey featuring flaming takraw balls and tribal accents.",
+    "tags": ["Graphic Design", "Apparel", "Sports"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-tbrc-logo",
     "title": "TBRC Logo",
+    "featured": false,
     "image": "projects/GRAPHIC DESIGN/TBRClogo.jpg",
     "short_desc": "True Buddies Riders Club Logo.",
     "long_desc": "Official logo design for TBRC symbolizing unity and brotherhood among riders.",
     "tags": ["Graphic Design", "Logo", "Branding"],
     "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
+    "code_url": "#"
   },
   {
-    "id": "des-poster-infidelity",
-    "title": "Film Poster: Infidelity",
-    "image": "projects/GRAPHIC DESIGN/Poster.jpg",
-    "short_desc": "Short film promotional poster.",
-    "long_desc": "Mood-setting movie poster design for the short film 'Infidelity', highlighting the lead cast.",
-    "tags": ["Graphic Design", "Poster", "Print"],
+    "id": "gd-miss-teen",
+    "title": "Miss Teen Fundado Tarp",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/TabagwangMissTeenFundado.jpg",
+    "short_desc": "Pageant promotional tarpaulin.",
+    "long_desc": "Eye-catching promotional layout for the Miss Teen Fundado pageant during the Tabagwang Festival.",
+    "tags": ["Graphic Design", "Print", "Events"],
     "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
+    "code_url": "#"
   },
   {
-    "id": "des-menu-tarp",
+    "id": "gd-tabagwang-shirt",
+    "title": "Tabagwang Festival Shirt",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/TabagwangShirt.jpg",
+    "short_desc": "Official festival merchandise.",
+    "long_desc": "Colorful and artistic t-shirt design for the Tabagwang Festival featuring local landmarks and cultural symbols.",
+    "tags": ["Graphic Design", "Apparel", "Festival"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-tabagwang-tarp",
+    "title": "Tabagwang Festival Tarp",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/TabagwangTarpulin.jpg",
+    "short_desc": "Festival stage backdrop.",
+    "long_desc": "Festive and colorful stage tarpaulin design celebrating the local Tabagwang Festival.",
+    "tags": ["Graphic Design", "Print", "Festival"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-menu-tarp",
     "title": "Frozen Foods Menu",
+    "featured": false,
     "image": "projects/GRAPHIC DESIGN/TarpulinMenu.jpg",
     "short_desc": "Advertising tarpaulin for food business.",
     "long_desc": "High-visibility menu design for a frozen foods business, designed to catch attention.",
-    "tags": ["Graphic Design", "Tarpaulin", "Advertising"],
+    "tags": ["Graphic Design", "Print", "Advertising"],
     "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
+    "code_url": "#"
   },
   {
-    "id": "des-election-poster",
-    "title": "Election Campaign Poster",
-    "image": "projects/GRAPHIC DESIGN/electionPoster.jpg",
-    "short_desc": "Campaign material layout.",
-    "long_desc": "Template design for election campaign posters featuring bold typography and patriotic colors.",
-    "tags": ["Graphic Design", "Poster", "Campaign"],
+    "id": "gd-tataferdz",
+    "title": "Tataferdz TV Logo",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/TataferdzTVlogo.jpg",
+    "short_desc": "YouTube channel branding.",
+    "long_desc": "Illustrated mascot logo designed for a local cooking/vlogging YouTube channel.",
+    "tags": ["Graphic Design", "Logo", "Branding"],
     "live_url": "#",
-    "code_url": "https://github.com/Jom-kowd"
+    "code_url": "#"
+  },
+  {
+    "id": "gd-generic-basketball",
+    "title": "Neon Purple Uniform",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/basketballjersey.jpg",
+    "short_desc": "Cyberpunk inspired custom jersey.",
+    "long_desc": "Vibrant purple and cyan geometric basketball uniform layout ready for sublimation printing.",
+    "tags": ["Graphic Design", "Apparel", "Sports"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-cadumanian",
+    "title": "Cadumanian Basketball",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/cadumanianbasketballjersey.jpg",
+    "short_desc": "Tribal-themed team jersey.",
+    "long_desc": "Black and white jersey design featuring intricate tribal side-panel patterns.",
+    "tags": ["Graphic Design", "Apparel", "Sports"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-cebu-ojt",
+    "title": "Univ. of Cebu OJT Polo",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/engineeringOJTShirt.jpg",
+    "short_desc": "Engineering department uniform.",
+    "long_desc": "Blueprint and construction-themed polo shirt for the University of Cebu Engineering OJT students.",
+    "tags": ["Graphic Design", "Apparel", "Uniform"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-geng-geng",
+    "title": "Geng Geng Moto Club",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/genggengmotoclub.jpg",
+    "short_desc": "Camouflage themed rider jersey.",
+    "long_desc": "Rider jersey design mixing camouflage patterns with clean vector badges for Geng Geng Moto Club.",
+    "tags": ["Graphic Design", "Apparel", "Riding"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-jaguar-riders",
+    "title": "Jaguar Riders Club",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/jaguarriderclub.jpg",
+    "short_desc": "Motorcycle club long sleeve design.",
+    "long_desc": "Aggressive and detailed layout design for Jaguar Motorcycle Riders Club featuring custom illustration.",
+    "tags": ["Graphic Design", "Apparel", "Riding"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-lupon",
+    "title": "Lupon Tagapamayapa Uniform",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/lupontagapamayapa.jpg",
+    "short_desc": "Barangay official polo shirt.",
+    "long_desc": "Elegant polo shirt design featuring Lady Justice, created for local barangay peacemakers.",
+    "tags": ["Graphic Design", "Apparel", "Uniform"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-palate-cheers",
+    "title": "Palate & Cheers Restobar",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/palateandcheers.jpg",
+    "short_desc": "Restaurant promotional tarpaulin.",
+    "long_desc": "Menu showcase and branding advertisement for a local restobar in Camarines Norte.",
+    "tags": ["Graphic Design", "Print", "Advertising"],
+    "live_url": "#",
+    "code_url": "#"
+  },
+  {
+    "id": "gd-vendo",
+    "title": "Piso WiFi Vendo Layout",
+    "featured": false,
+    "image": "projects/GRAPHIC DESIGN/vendowebdesign.jpg",
+    "short_desc": "Digital signage for WiFi vending machine.",
+    "long_desc": "Gaming-centric digital layout designed to attract users to a local Piso WiFi vendo machine.",
+    "tags": ["Graphic Design", "Print", "Advertising"],
+    "live_url": "#",
+    "code_url": "#"
   }
 ]
