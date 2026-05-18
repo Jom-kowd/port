@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const skillsContainer = document.querySelector('.tech-stack-wrapper');
+    const skillsContainer = document.querySelector('.tech-bento-grid');
     if (skillsContainer) {
         loadSkills(skillsContainer);
     }
@@ -11,25 +11,28 @@ async function loadSkills(container) {
         if (!response.ok) throw new Error('Failed to load skills');
         const skillsData = await response.json();
 
-        container.innerHTML = ''; // Clear existing static content
+        container.innerHTML = ''; 
 
-        skillsData.forEach(category => {
-            // Build items HTML
+        skillsData.forEach((category, index) => {
+            // Build inner items
             const itemsHTML = category.items.map(item => `
-                <div class="tech-item">
+                <div class="bento-tech-item">
                     <i class="${item.icon}"></i>
                     <span>${item.name}</span>
                 </div>
             `).join('');
 
+            // Make specific cards wider for the asymmetrical Bento look (1st and 4th card)
+            const extraClass = (index === 0 || index === 3) ? 'wide-span' : '';
+
             // Build Card HTML
             const cardHTML = `
-                <div class="tech-card fade-in-element">
-                    <div class="tech-card-header">
-                        <div class="icon-wrapper"><i class="${category.icon}"></i></div>
+                <div class="tech-bento-card fade-in-element ${extraClass}">
+                    <div class="bento-card-header">
+                        <div class="bento-icon-wrapper"><i class="${category.icon}"></i></div>
                         <h3>${category.category}</h3>
                     </div>
-                    <div class="tech-grid">
+                    <div class="bento-items-grid">
                         ${itemsHTML}
                     </div>
                 </div>
@@ -37,7 +40,6 @@ async function loadSkills(container) {
             container.innerHTML += cardHTML;
         });
 
-        // Re-initialize animations
         if (typeof initializeScrollReveal === 'function') {
             initializeScrollReveal();
         }

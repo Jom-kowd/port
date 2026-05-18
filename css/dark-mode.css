@@ -473,3 +473,58 @@ body.dark-mode .project-card:hover {
     background-color: rgba(100, 255, 218, 0.05) !important; /* Mint Tint */
     border-color: var(--primary-color) !important;
 }
+
+/* --- Skills Page Overrides (Dark Mode) --- */
+
+body.dark-mode .tech-bento-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .bento-icon-wrapper {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+body.dark-mode .bento-tech-item {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .bento-tech-item:hover {
+    background: rgba(100, 255, 218, 0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .soft-bento-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .soft-bento-card p {
+    color: var(--secondary-color);
+}
+
+/* Maintain dark aesthetic inside the workflow section for both modes, 
+   but ensure proper border colors in dark mode */
+body.dark-mode .workflow-modern-section {
+    background: #0A192F; 
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+
+body.dark-mode .step-marker {
+    background: #0A192F;
+}
+
+/* Glassmorphism extension for new cards */
+body.dark-mode .tech-bento-card, 
+body.dark-mode .soft-bento-card {
+    background-color: rgba(17, 34, 64, 0.6) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+body.dark-mode .tech-bento-card:hover, 
+body.dark-mode .soft-bento-card:hover {
+    background-color: rgba(100, 255, 218, 0.05) !important;
+    border-color: var(--primary-color) !important;
+}
