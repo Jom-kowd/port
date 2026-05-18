@@ -57,79 +57,60 @@
         </nav>
     </header>
 
-    <main>
-        <section id="contact-page" class="container fade-in-element">
-            
-            <div class="contact-header-center">
-                <h1 class="page-title">Let's Work Together</h1>
-                <p class="sub-headline">Have a project in mind or just want to say hi? Fill out the form below or send me an email.</p>
+<main>
+        <section class="container fade-in-element" style="padding-top: 8rem; padding-bottom: 6rem;">
+            <div class="skills-header" style="text-align: center; margin-bottom: 4rem;">
+                <span class="accent-label">04. Get In Touch</span>
+                <h1 class="display-heading">Let's <span class="text-gradient">Connect</span></h1>
+                <p class="lead-text" style="max-width: 600px; margin: 0 auto;">Have a project in mind, a question, or just want to say hi? I'm currently open to new opportunities and my inbox is always open.</p>
             </div>
 
-            <div class="contact-wrapper">
-                
-                <div class="contact-sidebar">
-                    <div class="sidebar-content">
-                        <h3>Contact Information</h3>
-                        <p class="sidebar-text">I'm currently available for freelance work and collaboration.</p>
-                        
-                        <div class="info-list">
-                            <div class="info-item">
-                                <i class="fa-solid fa-phone"></i>
-                                <span>0970 789 7048</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="devicon-google-plain"></i>
-                                <span>markjomarcalmateo@gmail.com</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="devicon-linkedin-plain"></i>
-                                <span>https://www.linkedin.com/in/mark-jomar-calmateo-684834366/</span>
-                            </div>
-                            <div class="info-item location">
-                                <span>Based in the Philippines</span>
-                            </div>
+            <div class="glass-contact-wrapper fade-in-element">
+                <div class="contact-info-panel">
+                    <h3>Contact Information</h3>
+                    <p>Fill out the form and I will get back to you within 24 hours.</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <span>markjomarcalmateo@gmail.com</span>
                         </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <span>Dasmariñas, Calabarzon, Philippines</span>
+                        </div>
+                    </div>
 
-                        <div class="sidebar-socials">
-                            <p>Follow my work:</p>
-                            <div class="social-icons">
-                                <a href="https://github.com/Jom-kowd" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="https://www.facebook.com/markjomar.calmateo.1" target="_blank"><i class="devicon-facebook-plain"></i></a>
-                                <a href="https://www.linkedin.com/in/mark-jomar-calmateo-684834366/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
-                            </div>
-                        </div>
+                    <div class="social-bouncy-group">
+                        <a href="https://github.com/Jom-kowd" target="_blank" class="bouncy-social" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+                        <a href="https://www.linkedin.com/in/mark-jomar-calmateo-684834366/" target="_blank" class="bouncy-social" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+                        <a href="https://www.facebook.com/markjomar.calmateo.1" target="_blank" class="bouncy-social" aria-label="Facebook"><i class="devicon-facebook-plain"></i></a>
                     </div>
                 </div>
 
-                <div class="contact-form-area">
-                    <form id="contactForm" action="https://formspree.io/f/xnnyabge" method="POST" class="modern-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your email" required>
-                            </div>
+                <div class="contact-form-panel">
+                    <form id="modern-contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Form logic ready to be connected!');">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
                         </div>
-                        
-                        <div class="form-group">
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry..." required>
                         </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        <div class="input-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
                         </div>
-
-                        <button type="submit" class="btn btn-primary full-width-btn">Send Message</button>
-                        
-                        <p id="form-status" style="display: none; text-align: center; margin-top: 1.5rem; font-weight: 600; padding: 1rem; border-radius: 8px; transition: all 0.3s ease;"></p>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
+                        </button>
                     </form>
                 </div>
-
             </div>
         </section>
     </main>
